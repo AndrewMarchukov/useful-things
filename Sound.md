@@ -2,6 +2,7 @@ https://sourceforge.net/projects/hesuvi/ любой 3д звук бесплат�
 
 эквалайзеры под наушники, делающие звук более нейтральным и "правильным" для HeSuvi выбирается GraphicEQ
 https://github.com/jaakkopasanen/AutoEq/tree/master/results
+
 скачать другие виртуальные звучания можно тут
 https://airtable.com/appayGNkn3nSuXkaz/shruimhjdSakUPg2m/tbloLjoZKWJDnLtTc
 

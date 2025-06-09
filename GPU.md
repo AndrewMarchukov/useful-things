@@ -14,12 +14,17 @@ https://www.techpowerup.com/download/techpowerup-nvcleanstall/ Установк�
 
 #### DLSS
 https://github.com/artur-graniszewski/DLSS-Enabler/releases
+
 https://github.com/cdozdil/OptiScaler
+
 https://github.com/beeradmoore/dlss-swapper
+
 https://github.com/SimonMacer/AnWave/releases/tag/AnWave-DLSS
 
 #### Для мониторов
 https://www.reddit.com/r/MotionClarity/s/pAOspNGG1a This is a snake oil?
+
 проверка сертификации Display port кабеля
 https://www.displayport.org/product-category/cables-adaptors/?ps=ugreen
+
 Калибровка цветов - https://bitbucket.org/CalibrationTools/calibration-tools/src/master/
