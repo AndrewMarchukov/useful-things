@@ -1,0 +1,4 @@
+; Sound Communications Do Nothing
+
+[HKEY_CURRENT_USER\Software\Microsoft\Multimedia\Audio]
+"UserDuckingPreference"=dword:00000003
