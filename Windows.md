@@ -25,7 +25,7 @@
   GUI to manage 100+ Windows privacy settings.  
   Графический интерфейс для настроек конфиденциальности.  
  - **Запускать от имени администратора, удаляет "шпионские" функции и задания**
-   telemetrystop.cmd
+   [telemetrystop.cmd](https://github.com/AndrewMarchukov/useful-things/blob/main/telemetrystop.cmd)
 
 ---
 
