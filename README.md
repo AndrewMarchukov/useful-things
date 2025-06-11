@@ -31,9 +31,4 @@ REG ADD "HKLM\System\CurrentControlSet\Control\usbflags" /v "fid_D2Latency" /t R
 REG ADD "HKLM\System\CurrentControlSet\Control\usbflags" /v "fid_D3Latency" /t REG_DWORD /d "0" /f >NUL 2>&1
 )
 
-
-:: GPU Optimizations GOOD
-REG ADD "HKLM\System\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "EnablePreemption" /t REG_DWORD /d "1" /f >NUL 2>&1
-REG ADD "HKLM\System\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "VsyncIdleTimeout" /t REG_DWORD /d "0" /f >NUL 2>&1
-
 ```

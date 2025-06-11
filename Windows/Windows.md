@@ -63,5 +63,4 @@
 - [**GTweak**](https://github.com/Greedeks/GTweak)  
   Preconfigured optimizations for Windows 10/11.  
   Готовые настройки для максимальной производительности.  
-- [**Лучший фаерволл**](https://safing.io/)  
-Восстановите конфиденциальность и верните контроль над всей сетью вашего компьютера
+

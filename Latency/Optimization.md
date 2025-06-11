@@ -27,18 +27,6 @@ Modified value: 3600
 w32tm /config /update
 ```
 
-#### Улучшаем TCP соединения для Windows некоторые игры до сих пор его используют к примеру Path of Exile, Once Human
-``` Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force ```
-https://github.com/MysticFoxDE/WINDOWS-OPTIMIZATIONS/blob/main/W10ANDW11-NETWORK-TCP-DESUBOPTIMIZATION.ps1
-https://www.speedguide.net/downloads.php 
-
-#### Буфер передачи для сетевой карты должен быть чем меньше тем лучше
-https://netbeez.net/blog/what-is-bufferbloat/
-https://www.bufferbloat.net/projects/bloat/wiki/Bufferbloat_FAQs/
-https://www.bufferbloat.net/projects/bloat/wiki/Linux_Tips/
-
-#### Безопасные твики, запускать под администратором
-latency-tweaks.bat
 
 
 
