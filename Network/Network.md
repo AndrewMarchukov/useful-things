@@ -49,3 +49,9 @@ https://www.bufferbloat.net/projects/bloat/wiki/Linux_Tips/
 
 - [**Лучший фаерволл**](https://safing.io/)  
 Восстановите конфиденциальность и верните контроль над всей сетью вашего компьютера
+
+
+
+
+### Просмотр параметров адаптера
+ ``` Get-NetAdapterAdvancedProperty -Name "Ethernet" ```
