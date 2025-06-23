@@ -29,7 +29,21 @@ Value name: SpecialPollInterval
 Default: 604800
 Modified value: 3600
 
-w32tm /config /update
+(base) C:\WINDOWS\system32>w32tm /config /update
+The following error occurred: The specified service does not exist as an installed service. (0x80070424)
+
+(base) C:\WINDOWS\system32>w32tm /register
+W32Time successfully registered.
+
+(base) C:\WINDOWS\system32>w32tm /query /source
+The following error occurred: The service has not been started. (0x80070426)
+
+(base) C:\WINDOWS\system32>net start w32time
+The Windows Time service is starting.
+The Windows Time service was started successfully.
+
+(base) C:\WINDOWS\system32>w32tm /query /source
+Local CMOS Clock
 ```
 
 
