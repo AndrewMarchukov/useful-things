@@ -64,3 +64,6 @@
   Preconfigured optimizations for Windows 10/11.  
   Готовые настройки для максимальной производительности.  
 
+Unnecessary app
+
+```get-appxpackage -allusers Microsoft.PowerAutomateDesktop | remove-appxpackage -allusers```
