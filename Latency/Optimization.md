@@ -22,7 +22,7 @@ bcdedit /set disabledynamictick yes
 
 Иногда синхронизация времени может быть важна по умолчанию в Windows это делается раз в неделю при условие если отставание более чем на 1 секунду, поменяем на каждый час и будем использовать дополнительные серверы синхронизации
 ```
-w32tm  /config /manualpeerlist:"ru.pool.ntp.org ntp3.vniiftri.ru ntp4.vniiftri.ru ntp.ix.ru ntp6.ntp-servers.net ntp1.ntp-servers.net time.cloudflare.com time.google.com pool.ntp.org" /syncfromflags:manual /update
+w32tm  /config /manualpeerlist:"ru.pool.ntp.org ntp3.vniiftri.ru ntp4.vniiftri.ru ntp.ix.ru time.cloudflare.com time.google.com ground.corbina.net time.apple.com time.aws.com time.facebook.com ntp2.mail.ru ntp.se" /syncfromflags:manual /update
 Regedit
 HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient
 Value name: SpecialPollInterval
