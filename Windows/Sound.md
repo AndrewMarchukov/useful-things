@@ -13,3 +13,8 @@ https://equalizerapo.com/download.html
 
 https://www.3appes.com/sound-lock/
 Sound Lock — устанавливает определённый предел громкости звука, выше которой громкость ни при каких обстоятельствах не поднимется. Неожиданно громкий звук вступления в новой игре или что-то вроде больше никогда не оглушат ваши уши, что бы ни случилось, никакой звук никогда не воспроизведётся громче установленного комфортного порога.
+
+
+Виртуальные звучание для Realtek и не только
+https://github.com/AAFOptimus/AAFFamilyDCHAudio/releases
+https://www.techpowerup.com/forums/threads/aaf-optimus-modded-driver-for-windows-10-windows-11-only-for-realtek-hdaudio-chips.327318/
