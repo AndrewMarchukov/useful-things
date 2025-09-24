@@ -1,0 +1,1 @@
+schtasks /create /tn "DisableExitLagPmService" /tr "cmd /c timeout /t 15 & sc stop ExitLagPmService & sc config ExitLagPmService start=disabled" /sc onstart /rl highest /f /ru "SYSTEM"
