@@ -6,6 +6,10 @@ https://www.techpowerup.com/download/nvidia-dlss-dll/
 запуск старых dx9-dx11 игр через Vulkan дает новую жизнь старым играм
 https://github.com/doitsujin/dxvk 
 
+Настройка прерывайний 
+https://github.com/spddl/GoInterruptPolicy/releases
+
+
 Ryzen 1-3 gen and old intel DPC Latency fix 
 
 https://www.overclockers.at/articles/the-hpet-bug-what-it-is-and-what-it-isnt
