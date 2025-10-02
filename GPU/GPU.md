@@ -28,3 +28,46 @@ https://www.reddit.com/r/MotionClarity/s/pAOspNGG1a This is a snake oil?
 https://www.displayport.org/product-category/cables-adaptors/?ps=ugreen
 
 Калибровка цветов - https://bitbucket.org/CalibrationTools/calibration-tools/src/master/
+
+
+####Shader cache
+
+🛠️ Commands & Paths Used
+Step 1 – Purge DirectX Shader Cache
+Run →
+cleanmgr
+✔ Select DirectX Shader Cache → Clean
+Manual delete:
+C:\Users\YourUser\AppData\Local\D3DSCache
+
+Step 2 – Disable Shader Compiler Service
+Run →
+regedit
+Path:
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\D3DShaderCache
+Set Start → 4 (Disabled)
+Revert: 2 (Automatic)
+
+Step 3 – GPU Shader Cache Size
+NVIDIA: Control Panel → Manage 3D Settings → Shader Cache Size → Set to 10GB or Unlimited
+AMD: Radeon Software → Settings → Storage → Delete Shader Cache
+
+Step 4 – Disable DirectX Telemetry Logging
+Run →
+regedit
+Path:
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\EventLog-Microsoft-Windows-Direct3DShaderCache
+Set Start → 0 (Disable logging)
+Revert: 1 (Enable logging)
+
+Step 5 – Clean Driver Shader Dumps & Crash Logs
+Run →
+%localappdata%
+Delete inside folders:
+NVIDIA\DXCache
+AMD\DxCache
+CrashDumps
+Batch cleanup commands (CMD):
+del /s /q "%localappdata%\NVIDIA\DXCache\*.*"
+del /s /q "%localappdata%\AMD\DxCache\*.*"
+del /s /q "%localappdata%\CrashDumps\*.*"
