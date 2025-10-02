@@ -94,3 +94,15 @@ Add-MpPreference -ExclusionProcess ${env:ProgramFiles(x86)}"\Common Files\Steam\
 ```
 
 </details>
+
+
+
+#### Timer Tool
+https://github.com/valleyofdoom/TimerResolution
+https://github.com/plankeeee/BetterTimerResolution?tab=readme-ov-file#testing
+
+
+Tickts.bat
+
+The behavior of the timer resolution on Windows changed with the release of Windows 10 v2004 to be per-process instead of system-wide as previously. This resulted in processes not setting a specific timer resolution on their own falls back to using the default timer resolution of 15.625ms (64 Hz) which can have various effects in games which were developed with the mistaken assumption of the timer resolution being much higher. An example of a common issue of a game using the default timer resolution is an unexpected 64 FPS cap/limit.
+Source: https://community.pcgamingwiki.com/file ... indows-11/
