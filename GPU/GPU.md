@@ -30,7 +30,10 @@ https://www.displayport.org/product-category/cables-adaptors/?ps=ugreen
 Калибровка цветов - https://bitbucket.org/CalibrationTools/calibration-tools/src/master/
 
 
-####Shader cache
+Rebar Force to all Games
+✅ Force Resizable BAR (ReBAR) with NVIDIA Profile Inspector
+rbar size limit - 0x0000000060000000 
+#### Shader cache
 
 🛠️ Commands & Paths Used
 Step 1 – Purge DirectX Shader Cache

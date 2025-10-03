@@ -7,6 +7,9 @@ https://github.com/Hyyote/files-/tree/main
 https://github.com/shoober420/windows11-scripts/tree/main
 https://sites.google.com/view/melodystweaks/basictweaks
 
+https://youtu.be/sbXzM60ad8I
+https://www.youtube.com/watch?v=x0BN608Sd3Q
+
 Tweaks:
 https://www.techpowerup.com/forums/threads/revisiting-hpet-bcdedit-tweaks-what-are-your-timer-bench-results-and-settings.326187/page-5
 https://www.youtube.com/@Savitarax/videos
