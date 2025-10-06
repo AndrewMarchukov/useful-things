@@ -1,10 +1,11 @@
 Windows Registry Editor Version 5.00
+;https://khorvie.tech/mnkdataqueuesize/
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\mouclass\Parameters]
-"MouseDataQueueSize"=dword:00000014
+"MouseDataQueueSize"=dword:00000064
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters]
-"KeyboardDataQueueSize"=dword:00000014
+"KeyboardDataQueueSize"=dword:00000064
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\mouclass\Parameters]
 "ThreadPriority"=dword:0000001f
