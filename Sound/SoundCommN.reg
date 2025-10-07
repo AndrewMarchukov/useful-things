@@ -1,3 +1,4 @@
+Windows Registry Editor Version 5.00
 ; Sound Communications Do Nothing
 
 [HKEY_CURRENT_USER\Software\Microsoft\Multimedia\Audio]
