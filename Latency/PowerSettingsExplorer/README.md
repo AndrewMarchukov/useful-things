@@ -1,1 +1,3 @@
 https://www.youtube.com/watch?v=x0BN608Sd3Q
+
+*IMPORTANT* Download PowerSettingsExplorer from here and run it as administrator. Then find the following 2 options: Processor Idle Demote Threshold and Processor Idle Promote Threshold, UNtick them both, then go to your power plan settings, find the new option under "Processor Power Management" and set both to 100%. That helps lower mostly all latencies
