@@ -1,0 +1,14 @@
+upnp should be disabled on the router for best results
+
+but for windows, you can disable the 
+SSDP Discovery service
+and
+UPnP Device Host
+
+so that in theory it should not respond to upnp probes, you can check with this test here
+
+https://www.grc.com/intro.htm
+
+to find the test go to their Services tab at the top and click Shields Up
+
+after proceeding you should see an orange button for their instant exposure test
