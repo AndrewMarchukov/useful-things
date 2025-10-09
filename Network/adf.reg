@@ -1,8 +1,8 @@
 Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\AFD\Parameters]
-"DefaultSendWindow"=dword:00100000
-"DefaultReceiveWindow"=dword:00100000
+"DefaultSendWindow"=dword:00080000
+"DefaultReceiveWindow"=dword:00080000
 "DynamicSendBufferDisable"=dword:00000001
 "BufferAlignment"=dword:00000001
 "DoNotHoldNICBuffers"=dword:00000001
@@ -12,5 +12,5 @@ Windows Registry Editor Version 5.00
 "IgnorePushBitOnReceives"=dword:00000001
 "IgnoreOrderlyRelease"=dword:00000001
 "DisableAddressSharing"=dword:00000001
-"FastSendDatagramThreshold"=dword:00000400
-"FastCopyReceiveThreshold"=dword:00000400
+"FastSendDatagramThreshold"=dword:00000200
+"FastCopyReceiveThreshold"=dword:00000200
