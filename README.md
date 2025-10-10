@@ -1,6 +1,9 @@
 ## Sources (researched)
 - https://github.com/djdallmann/GamingPCSetup
 - https://github.com/AlchemyTweaks/Verified-Tweaks/tree/main
+- https://github.com/BoringBoredom/PC-Optimization-Hub
+- https://github.com/valleyofdoom/PC-Tuning
+- https://docs.google.com/document/d/1c2-lUJq74wuYK1WrA_bIvgb89dUN0sj8-hO3vqmrau4/edit?tab=t.0
 
 ## Questionable / use with caution
 - https://github.com/Hyyote/files-/tree/main
