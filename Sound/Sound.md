@@ -25,3 +25,7 @@ https://www.reddit.com/r/PowerShell/comments/p0wma3/where_to_begin_change_settin
 
 just set high or realtime prioryty for audiodg.exe in process lasso or in registry
 audiodg.reg
+
+
+Audio latency reduction on the default playback device
+https://github.com/spddl/LowAudioLatency#readme
