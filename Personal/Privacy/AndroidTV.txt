@@ -1,0 +1,99 @@
+
+
+
+#https://xdaforums.com/t/how-to-set-permanent-background-process-limit.1869712/
+# How to set Permanent Background process limit ?
+# service call activity 51 i32 x - Android 5 ( and maby below? )
+
+# service call activity 51 i32 x - Android 7 ( good with 6 also )
+
+# service call activity 42 i32 x - Android 8
+
+# service call activity 47 i32 x - Android 9 ( not confirmed )
+
+# service call activity 43 i32 x - Android 11 (not sure, it could also be 44)
+
+# service call activity 44 i32 x - Android 13
+
+#adb install adb_on_boot-asfm.apk
+
+#adb shell pm disable-user --user 0
+
+adb shell pm uninstall --user 0 com.tcl.browser
+adb shell pm uninstall --user 0 com.tcl.tv.appstore
+adb shell pm uninstall --user 0 com.tcl.tv.cast
+adb shell pm uninstall --user 0 com.tcl.usercenter
+adb shell pm uninstall --user 0 com.tcl.tclaccount
+adb shell pm uninstall --user 0 com.tcl.tv.tcloudaccount
+adb shell pm uninstall --user 0 com.tcl.gallery
+adb shell pm uninstall --user 0 com.tcl.mediacenter
+adb shell pm uninstall --user 0 com.tcl.screenadservice
+adb shell pm uninstall --user 0 com.tcl.screensaver
+adb shell pm uninstall --user 0 com.tcl.eula
+adb shell pm uninstall --user 0 com.google.android.leanbacklauncher.recommendations
+adb shell pm uninstall --user 0 com.google.android.gms.cast.receiver
+adb shell pm uninstall --user 0 com.google.android.backdrop
+adb shell pm uninstall --user 0 com.google.android.videos
+adb shell pm uninstall --user 0 com.google.android.play.games
+adb shell pm uninstall --user 0 com.google.android.apps.mediashell
+adb shell pm uninstall --user 0 com.google.android.apps.nbu.smartconnect.tv
+adb shell pm uninstall --user 0 com.google.android.feedback
+adb shell pm uninstall --user 0 com.google.android.onetimeinitializer
+adb shell pm uninstall --user 0 com.google.android.syncadapters.calendar
+adb shell pm uninstall --user 0 com.google.android.partnersetup
+adb shell pm uninstall --user 0 com.android.printspooler
+adb shell pm uninstall --user 0 com.google.android.marvin.talkback
+adb shell pm uninstall --user 0 com.google.android.tvrecommendations
+
+
+adb shell pm uninstall --user 0 -k com.cvte.tv.fac.rus_apk
+adb shell pm uninstall --user 0 -k com.netflix.ninja
+adb shell pm uninstall --user 0 -k com.amazon.amazonvideo.livingroom
+adb shell pm uninstall --user 0 -k com.xiaomi.amazon.alexa
+adb shell pm uninstall --user 0 -k com.miui.tv.analytics
+adb shell pm uninstall --user 0 -k com.xiaomi.mitv.updateservice
+adb shell pm uninstall --user 0 -k com.mitv.tvhome.mitvplus 
+adb shell pm uninstall --user 0 -k com.xiaomi.mimusic2
+
+adb shell pm uninstall --user 0 -k com.miui.tvhome.atv
+adb shell pm uninstall --user 0 -k com.xiaomi.mitv.smartshare
+adb shell pm uninstall --user 0 -k com.xiaomi.mitv.mediaexplorer
+adb shell pm uninstall --user 0 -k com.mitv.tvhome
+adb shell pm uninstall --user 0 -k com.xiaomi.tv.gallery
+adb shell pm uninstall --user 0 -k com.jiajia.yundonghui.mitv
+adb shell pm uninstall --user 0 -k com.xiaomi.gamecenter.sdk.service.mibox
+adb shell pm uninstall --user 0 -k com.miui.systemAdSolution
+adb shell pm uninstall --user 0 -k com.xiaomi.mitv.appstore
+adb shell pm uninstall --user 0 -k com.xiaomi.mitv.osstatistic
+adb shell pm uninstall --user 0 -k com.xiaomi.mibox.gamecenter
+adb shell pm uninstall --user 0 -k com.xiaomi.smarthome.tv
+adb shell pm uninstall --user 0 -k com.xiaomi.mibox.lockscreen
+adb shell pm uninstall --user 0 -k com.xiaomi.mitv.payment
+adb shell pm uninstall --user 0 -k com.xiaomi.mitv.assistant.manual
+adb shell pm uninstall --user 0 -k com.android.gallery3d
+adb shell pm uninstall --user 0 -k com.xiaomi.mitv.pay
+adb shell pm uninstall --user 0 -k com.xiaomi.mitv.advertise
+adb shell pm uninstall --user 0 -k com.xiaomi.mimusic
+adb shell pm uninstall --user 0 -k com.mitv.gallery
+adb shell pm uninstall --user 0 -k com.xiaomi.tv.appupgrade
+adb shell pm uninstall --user 0 -k com.xiaomi.statistic
+adb shell pm uninstall --user 0 -k com.android.music
+adb shell pm uninstall --user 0 -k com.xiaomi.mitv.tvpush.tvpushservice
+adb shell pm uninstall --user 0 -k com.mitv.video
+adb shell pm uninstall --user 0 -k com.mipay.wallet.tv
+adb shell pm uninstall --user 0 -k com.xiaomi.tweather
+adb shell pm uninstall --user 0 -k com.miui.cloudservice
+adb shell pm uninstall --user 0 -k com.xiaomi.account.auth
+adb shell pm uninstall --user 0 -k com.baidu.tv.download
+adb shell pm uninstall --user 0 -k com.xiaomi.mitv.download
+adb shell pm uninstall --user 0 -k com.baidu.input
+
+adb shell pm uninstall --user 0 -k com.xiaomi.mitv.shop
+adb shell pm uninstall --user 0 -k com.xiaomi.mitv.shop.mihome
+adb shell pm uninstall --user 0 -k com.xiaomi.mitv.shop.tvshop
+adb shell pm uninstall --user 0 -k com.xm.webcontent
+
+adb shell pm hide com.xiaomi.mitv.upgrade
+
+adb shell cmd package list packages
+#adb reboot
