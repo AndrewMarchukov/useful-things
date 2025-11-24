@@ -1,6 +1,6 @@
 cat app_list.txt | ./remover.sh
 
-Выставить количество приложение в фоновом режиме
+Выставить количество приложение в фоновом режиме Х чисто от 0 до 4
 #https://xdaforums.com/t/how-to-set-permanent-background-process-limit.1869712/
 # How to set Permanent Background process limit ?
 # service call activity 51 i32 x - Android 5 ( and maby below? )
@@ -45,7 +45,7 @@ adb shell cmd package list packages
 
 
 
-Перекомпилсяция для ускорения запуска и работы ТВ
+Перекомпиляция для ускорения запуска и работы ТВ
 После подключения к телевизору, вводите эти команды:
 
 adb shell pm compile -a -f --check-prof false -m everything
