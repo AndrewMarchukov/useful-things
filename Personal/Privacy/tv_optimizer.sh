@@ -32,7 +32,7 @@ for app in "${apps[@]}"; do
         echo "---"
     fi
 done
-
+sleep 1
 for app in "${apps[@]}"; do
     if [ -n "$app" ]; then
         echo "Uninstalling: $app"
@@ -66,15 +66,16 @@ adb shell pm bg-dexopt-job
 for app in "${apps[@]}"; do
     if [ -n "$app" ]; then
         echo "Disabling: $app" for user 0
-        adb shell pm disable-user --user 0 "$app"
+        adb shell pm disable-user --user 0 "$app" 2>/dev/null | grep "new state:"
         echo "---"
     fi
 done
+sleep 1
 
 for app in "${apps[@]}"; do
     if [ -n "$app" ]; then
         echo "Disabling: $app"
-        adb shell pm disable-user "$app"
+        adb shell pm disable-user "$app" 2>/dev/null | grep "new state:"
         echo "---"
     fi
 done
