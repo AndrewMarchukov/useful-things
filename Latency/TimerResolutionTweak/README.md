@@ -1,0 +1,1 @@
+https://github.com/valleyofdoom/PC-Tuning/blob/main/docs/research.md#micro-adjusting-timer-resolution-for-higher-precision
