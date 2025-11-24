@@ -90,6 +90,9 @@ if ! adb shell settings get global cached_apps_freezer | grep -q "enabled"; then
         adb shell device_config put activity_manager_native_boot use_freezer true
         adb shell device_config put activity_manager_native_boot freeze_debounce_timeout 1000
         echo "Successfully enabled cached apps freezer"
+        # adb shell device_config put activity_manager_native_boot freezer_exempt_inst_pkg com.adguard.android
+        # adb shell appops set com.adguard.android RUN_IN_BACKGROUND allow
+        # adb shell appops set com.adguard.android RUN_ANY_IN_BACKGROUND allow
         # Reboot the device
         echo "Rebooting device..."
         adb reboot
