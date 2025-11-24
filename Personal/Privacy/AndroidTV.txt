@@ -1,6 +1,6 @@
+cat app_list.txt | ./remover.sh
 
-
-
+Выставить количество приложение в фоновом режиме
 #https://xdaforums.com/t/how-to-set-permanent-background-process-limit.1869712/
 # How to set Permanent Background process limit ?
 # service call activity 51 i32 x - Android 5 ( and maby below? )
@@ -17,83 +17,60 @@
 
 #adb install adb_on_boot-asfm.apk
 
-#adb shell pm disable-user --user 0
-
-adb shell pm uninstall --user 0 com.tcl.browser
-adb shell pm uninstall --user 0 com.tcl.tv.appstore
-adb shell pm uninstall --user 0 com.tcl.tv.cast
-adb shell pm uninstall --user 0 com.tcl.usercenter
-adb shell pm uninstall --user 0 com.tcl.tclaccount
-adb shell pm uninstall --user 0 com.tcl.tv.tcloudaccount
-adb shell pm uninstall --user 0 com.tcl.gallery
-adb shell pm uninstall --user 0 com.tcl.mediacenter
-adb shell pm uninstall --user 0 com.tcl.screenadservice
-adb shell pm uninstall --user 0 com.tcl.screensaver
-adb shell pm uninstall --user 0 com.tcl.eula
-adb shell pm uninstall --user 0 com.google.android.leanbacklauncher.recommendations
-adb shell pm uninstall --user 0 com.google.android.gms.cast.receiver
-adb shell pm uninstall --user 0 com.google.android.backdrop
-adb shell pm uninstall --user 0 com.google.android.videos
-adb shell pm uninstall --user 0 com.google.android.play.games
-adb shell pm uninstall --user 0 com.google.android.apps.mediashell
-adb shell pm uninstall --user 0 com.google.android.apps.nbu.smartconnect.tv
-adb shell pm uninstall --user 0 com.google.android.feedback
-adb shell pm uninstall --user 0 com.google.android.onetimeinitializer
-adb shell pm uninstall --user 0 com.google.android.syncadapters.calendar
-adb shell pm uninstall --user 0 com.google.android.partnersetup
-adb shell pm uninstall --user 0 com.android.printspooler
-adb shell pm uninstall --user 0 com.google.android.marvin.talkback
-adb shell pm uninstall --user 0 com.google.android.tvrecommendations
-
-
-adb shell pm uninstall --user 0 -k com.cvte.tv.fac.rus_apk
-adb shell pm uninstall --user 0 -k com.netflix.ninja
-adb shell pm uninstall --user 0 -k com.amazon.amazonvideo.livingroom
-adb shell pm uninstall --user 0 -k com.xiaomi.amazon.alexa
-adb shell pm uninstall --user 0 -k com.miui.tv.analytics
-adb shell pm uninstall --user 0 -k com.xiaomi.mitv.updateservice
-adb shell pm uninstall --user 0 -k com.mitv.tvhome.mitvplus 
-adb shell pm uninstall --user 0 -k com.xiaomi.mimusic2
-
-adb shell pm uninstall --user 0 -k com.miui.tvhome.atv
-adb shell pm uninstall --user 0 -k com.xiaomi.mitv.smartshare
-adb shell pm uninstall --user 0 -k com.xiaomi.mitv.mediaexplorer
-adb shell pm uninstall --user 0 -k com.mitv.tvhome
-adb shell pm uninstall --user 0 -k com.xiaomi.tv.gallery
-adb shell pm uninstall --user 0 -k com.jiajia.yundonghui.mitv
-adb shell pm uninstall --user 0 -k com.xiaomi.gamecenter.sdk.service.mibox
-adb shell pm uninstall --user 0 -k com.miui.systemAdSolution
-adb shell pm uninstall --user 0 -k com.xiaomi.mitv.appstore
-adb shell pm uninstall --user 0 -k com.xiaomi.mitv.osstatistic
-adb shell pm uninstall --user 0 -k com.xiaomi.mibox.gamecenter
-adb shell pm uninstall --user 0 -k com.xiaomi.smarthome.tv
-adb shell pm uninstall --user 0 -k com.xiaomi.mibox.lockscreen
-adb shell pm uninstall --user 0 -k com.xiaomi.mitv.payment
-adb shell pm uninstall --user 0 -k com.xiaomi.mitv.assistant.manual
-adb shell pm uninstall --user 0 -k com.android.gallery3d
-adb shell pm uninstall --user 0 -k com.xiaomi.mitv.pay
-adb shell pm uninstall --user 0 -k com.xiaomi.mitv.advertise
-adb shell pm uninstall --user 0 -k com.xiaomi.mimusic
-adb shell pm uninstall --user 0 -k com.mitv.gallery
-adb shell pm uninstall --user 0 -k com.xiaomi.tv.appupgrade
-adb shell pm uninstall --user 0 -k com.xiaomi.statistic
-adb shell pm uninstall --user 0 -k com.android.music
-adb shell pm uninstall --user 0 -k com.xiaomi.mitv.tvpush.tvpushservice
-adb shell pm uninstall --user 0 -k com.mitv.video
-adb shell pm uninstall --user 0 -k com.mipay.wallet.tv
-adb shell pm uninstall --user 0 -k com.xiaomi.tweather
-adb shell pm uninstall --user 0 -k com.miui.cloudservice
-adb shell pm uninstall --user 0 -k com.xiaomi.account.auth
-adb shell pm uninstall --user 0 -k com.baidu.tv.download
-adb shell pm uninstall --user 0 -k com.xiaomi.mitv.download
-adb shell pm uninstall --user 0 -k com.baidu.input
-
-adb shell pm uninstall --user 0 -k com.xiaomi.mitv.shop
-adb shell pm uninstall --user 0 -k com.xiaomi.mitv.shop.mihome
-adb shell pm uninstall --user 0 -k com.xiaomi.mitv.shop.tvshop
-adb shell pm uninstall --user 0 -k com.xm.webcontent
-
-adb shell pm hide com.xiaomi.mitv.upgrade
-
 adb shell cmd package list packages
-#adb reboot
+
+
+
+Доп. методы отключения не нужных приложений
+
+Название приложения: PatchWall
+Статус: можно отключать, но по этой инструкции
+Имя пакета: com.miui.tvhome.atv
+Расположение исходного APK: /system/priv-app/TvHome/
+Отключение PatchWall.
+В настройках устройства - выбрать PatchWall- в графе "область обслуживания" выставить регион "другой источник".
+После чего приставка перезагрузится.
+Затем, настройки -- приложения -- и отключить PW
+После таких манипуляций на кнопку mi автоматом подвязывается live tv, т.е эфирные каналы.
+Так же можно отключить уведомления и запретить все доступы. Отключить лаунчер по умолчанию.
+У меня тв 32" . Думаю с другими tv, будет аналогично.
+Описание: Лаунчер от Xiaomi с рекомендациями. На мой взгляд сильно перегруженный всякими рекомендациями, в связи с чем вызывает торможения.
+
+Название приложения: TvServices
+Статус: можно отключать, если очень хочется
+Имя пакета: com.mediatek.tv.service
+Расположение исходного APK: /system/priv-app/TvServices/
+Описание: Отвечает за самодиагностику ТВ, которая автоматически запускается в 5:00 утра, пробуждая телевизор из режима сна. Также отвечает за таймер отключения в настройках ТВ и многое другое. Подробнее о этом приложении писал ЗДЕСЬ.
+
+
+
+
+Перекомпилсяция для ускорения запуска и работы ТВ
+После подключения к телевизору, вводите эти команды:
+
+adb shell pm compile -a -f --check-prof false -m everything
+adb shell pm compile -a -f --check-prof false --compile-layouts
+adb shell pm bg-dexopt-job
+
+В результате мы получаем быструю загрузку, мгновенный отклик, стабильную работу приложений.
+Вернуть назад настойки вы можете введя эти команды:
+
+adb shell pm compile -a -f -r install
+adb shell pm bg-dexopt-job
+
+Отменить изменения для конкретного приложения
+adb shell pm compile -f -r install -имя пакета, например com.teamsmart.videomanager.tv-
+
+
+
+
+Для того чтобы включить эту функцию надо ввести три команды, выделенные красным цветом:
+adb shell settings put global cached_apps_freezer enabled
+Команда имеет три значения: enabled|disabled|default, по умочанию у нас default-отключена
+adb shell device_config put activity_manager_native_boot use_freezer true
+Чтобы смягчить включение функции дадим ей немного времени
+adb shell device_config put activity_manager_native_boot freeze_debounce_timeout 1000
+adb reboot
+
+
+logcat | grep -i freeze 
