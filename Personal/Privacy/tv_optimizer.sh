@@ -62,3 +62,27 @@ for app in "${apps[@]}"; do
         echo "---"
     fi
 done
+
+# Check if cached apps freezer is enabled
+if ! adb shell settings get global cached_apps_freezer | grep -q "enabled"; then
+    echo "Enabling cached apps freezer..."
+    adb shell settings put global cached_apps_freezer enabled
+    
+    # Verify the change
+    if adb shell settings get global cached_apps_freezer | grep -q "enabled"; then
+        adb shell device_config put activity_manager_native_boot use_freezer true
+        adb shell device_config put activity_manager_native_boot freeze_debounce_timeout 1000
+        echo "Successfully enabled cached apps freezer"
+        # Reboot the device
+        echo "Rebooting device..."
+        adb reboot
+    else
+        echo "Cached apps freezer not supported"
+        exit 1
+    fi
+else
+    echo "Cached apps freezer already enabled"
+fi
+
+#logcat | grep -i freeze 
+#adb shell getprop
