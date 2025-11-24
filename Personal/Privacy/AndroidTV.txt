@@ -63,7 +63,7 @@ adb shell pm compile -f -r install -имя пакета, например com.te
 
 
 
-
+ANDROID 11 TVs
 Для того чтобы включить эту функцию надо ввести три команды, выделенные красным цветом:
 adb shell settings put global cached_apps_freezer enabled
 Команда имеет три значения: enabled|disabled|default, по умочанию у нас default-отключена

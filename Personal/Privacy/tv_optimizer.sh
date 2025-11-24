@@ -39,12 +39,6 @@ sleep 5
 echo "Rebooting device..."
 adb reboot
 
-# Wait for device to become available again
-echo "Waiting for device to come back online..."
-while ! adb devices | grep -qE "[*a-zA-Z0-9-]*[[:space:]]*device$"; do
-    sleep 5
-done
-
 echo "Waiting for device to come back online..."
 while true; do
     if adb devices | grep -q "device$"; then
@@ -55,6 +49,10 @@ done
 
 echo "Device is back online!"
 sleep 10  # Additional wait for full boot completion
+
+adb shell pm compile -a -f --check-prof false -m everything
+adb shell pm compile -a -f --check-prof false --compile-layouts
+adb shell pm bg-dexopt-job
 
 # Disable each app
 for app in "${apps[@]}"; do
