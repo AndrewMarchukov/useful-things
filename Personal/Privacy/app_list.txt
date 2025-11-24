@@ -9,6 +9,7 @@ com.tcl.mediacenter
 com.tcl.screenadservice
 com.tcl.screensaver
 com.tcl.eula
+com.google.android.leanbacklauncher
 com.google.android.leanbacklauncher.recommendations
 com.google.android.backdrop
 com.google.android.videos
