@@ -18,7 +18,7 @@ cat app_list.txt | ./tv_optimizer.sh
 
 # service call activity 44 i32 x - Android 13
 
-#adb install adb_on_boot-asfm.apk
+# adb install adb_on_boot-asfm.apk
 
 adb shell cmd package list packages
 
