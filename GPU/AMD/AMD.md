@@ -19,3 +19,6 @@ Remove-WindowsCapability -Online -Name "VBScript~~~~0.0.1.0"
 or
 
 DISM /Online /remove-Capability /CapabilityName:VBScript
+
+
+https://www.reddit.com/r/radeon/s/pGybq2lF4y
