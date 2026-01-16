@@ -19,6 +19,8 @@ Software and guides for enhancing online privacy and blocking unwanted content.
     * Comprehensive guide and scripts for hardening system privacy settings.
     * Подробное руководство и скрипты для усиления настроек конфиденциальности системы.
 
+https://ramon.vanraaij.eu/my-adguard-powerhouse-building-a-centralized-network-wide-ad-blocker/
+
 ---
 
 ## Android Optimization / Оптимизация Android

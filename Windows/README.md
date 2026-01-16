@@ -57,6 +57,7 @@
 ---
 
 ## 🧰 **Bonus Utilities / Дополнительные утилиты**  
+- [**Awesome Windows**](https://github.com/0PandaDEV/awesome-windows)
 - [**Microsoft PowerToys**](https://remontka.pro/microsoft-powertoys-windows-10/)  
   FancyZones, Awake, Color Picker, and other productivity tools.  
   Набор полезных инструментов для Windows (управление окнами, пипетка и др.).  
