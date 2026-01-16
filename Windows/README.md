@@ -70,6 +70,7 @@
 
 #### BIOS shortcut
 
+```
 Create yourself a shortcut instead with right click > new > shortcut
 
 C:\Windows\System32\shutdown.exe /r /fw /T 5
@@ -77,3 +78,4 @@ C:\Windows\System32\shutdown.exe /r /fw /T 5
 /r - restart
 /fw - will drop you to EUFI
 /T (number of seconds after which restart will trigger)
+```

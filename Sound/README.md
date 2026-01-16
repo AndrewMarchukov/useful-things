@@ -1,31 +1,67 @@
-https://sourceforge.net/projects/hesuvi/ любой 3д звук бесплатно
+# Audio Optimization & Tools / Аудио оптимизация и инструменты
 
-эквалайзеры под наушники, делающие звук более нейтральным и "правильным" для HeSuvi выбирается GraphicEQ
-https://github.com/jaakkopasanen/AutoEq/tree/master/results
+This repository contains tools and guides for 3D audio virtualization, microphone noise suppression, and latency reduction.
 
-скачать другие виртуальные звучания можно тут
-https://airtable.com/appayGNkn3nSuXkaz/shruimhjdSakUPg2m/tbloLjoZKWJDnLtTc
+Этот репозиторий содержит инструменты и руководства по виртуализации 3D звука, шумоподавлению микрофона и уменьшению задержек.
 
-Убираем шумы микрофона бесплатно
-https://medium.com/@bssankaran/free-and-open-source-software-noise-cancelling-for-working-from-home-edb1b4e9764e
-https://github.com/werman/noise-suppression-for-voice
-https://equalizerapo.com/download.html
+---
 
-https://www.3appes.com/sound-lock/
-Sound Lock — устанавливает определённый предел громкости звука, выше которой громкость ни при каких обстоятельствах не поднимется. Неожиданно громкий звук вступления в новой игре или что-то вроде больше никогда не оглушат ваши уши, что бы ни случилось, никакой звук никогда не воспроизведётся громче установленного комфортного порога.
+## 3D Audio & Virtualization / 3D звук и виртуализация
 
+Tools for enabling virtual surround sound and modded audio drivers.
 
-Виртуальные звучание для Realtek и не только
-https://github.com/AAFOptimus/AAFFamilyDCHAudio/releases
-https://www.techpowerup.com/forums/threads/aaf-optimus-modded-driver-for-windows-10-windows-11-only-for-realtek-hdaudio-chips.327318/
+Инструменты для включения виртуального объемного звука и модифицированные аудиодрайверы.
 
+* **HeSuvi (Free 3D Audio):** https://sourceforge.net/projects/hesuvi/
+* **Virtual Sound Profiles Database:** https://airtable.com/appayGNkn3nSuXkaz/shruimhjdSakUPg2m/tbloLjoZKWJDnLtTc
+* **AAF Optimus (Modded Realtek Drivers):** https://github.com/AAFOptimus/AAFFamilyDCHAudio/releases
+* **AAF Optimus Discussion:** https://www.techpowerup.com/forums/threads/aaf-optimus-modded-driver-for-windows-10-windows-11-only-for-realtek-hdaudio-chips.327318/
 
-audiodg.exe
-https://www.reddit.com/r/PowerShell/comments/p0wma3/where_to_begin_change_settings_in_audiodgexe/
+---
 
-just set high or realtime prioryty for audiodg.exe in process lasso or in registry
-audiodg.reg
+## Equalization & Calibration / Эквалайзеры и калибровка
 
+Resources for headphone calibration to achieve neutral sound. Use the **GraphicEQ** format for HeSuvi.
 
-Audio latency reduction on the default playback device
-https://github.com/spddl/LowAudioLatency#readme
+Ресурсы для калибровки наушников для достижения нейтрального звука. Используйте формат **GraphicEQ** для HeSuvi.
+
+* **AutoEq Results:** https://github.com/jaakkopasanen/AutoEq/tree/master/results
+
+---
+
+## Microphone Noise Suppression / Шумоподавление микрофона
+
+Software and guides for removing background noise from microphone input for free.
+
+Программное обеспечение и руководства для бесплатного удаления фонового шума с микрофона.
+
+* **Guide (Medium):** https://medium.com/@bssankaran/free-and-open-source-software-noise-cancelling-for-working-from-home-edb1b4e9764e
+* **Noise Suppression Plugin (Werman):** https://github.com/werman/noise-suppression-for-voice
+* **Equalizer APO:** https://equalizerapo.com/download.html
+
+---
+
+## Volume Control & Protection / Контроль громкости и защита
+
+Utilities to limit maximum volume output to prevent sudden loud noises.
+
+Утилиты для ограничения максимальной громкости во избежание резких громких звуков.
+
+* **Sound Lock:** https://www.3appes.com/sound-lock/
+    * Sets a specific volume limit. Unexpectedly loud sounds (e.g., game intros) will not exceed the set comfortable threshold.
+    * Устанавливает определенный предел громкости. Неожиданно громкие звуки (например, заставки игр) не превысят установленный комфортный порог.
+
+---
+
+## Latency & System Tuning / Задержка и системная настройка
+
+Fixes for audio latency and process prioritization.
+
+Исправления задержки звука и приоритезация процессов.
+
+* **Low Audio Latency:** https://github.com/spddl/LowAudioLatency#readme
+* **Audiodg.exe Configuration Discussion:** https://www.reddit.com/r/PowerShell/comments/p0wma3/where_to_begin_change_settings_in_audiodgexe/
+
+### Audiodg Priority / Приоритет Audiodg
+Set `audiodg.exe` to High or Realtime priority using Process Lasso or the registry to reduce stuttering.
+Установите для `audiodg.exe` высокий приоритет или приоритет реального времени с помощью Process Lasso или реестра для уменьшения заиканий звука.
