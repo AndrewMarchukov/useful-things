@@ -1,4 +1,4 @@
-# PC Optimization & Tuning / Оптимизация и настройка ПК
+# PC Optimization & Tuning and so on... / Оптимизация и настройка ПК и не только...
 
 This repository contains a collection of resources, scripts, and guides for optimizing Windows and tuning PC hardware.
 
