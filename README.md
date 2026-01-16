@@ -24,8 +24,10 @@
 ## Question (Microsoft Answers)
 - https://answers.microsoft.com/en-us/windows/forum/all/why-does-this-happen-in-24h2/7e8145b4-f56c-452f-8bba-7da58614d6f7
 
-## “Crap-free Windows”
+## Crap-free Windows BEST way to debloat
 - AtlasOS: https://atlasos.net/
+- https://github.com/ChrisTitusTech/winutil
+- https://github.com/zoicware/RemoveWindowsAI
 
 ---
 

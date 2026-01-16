@@ -1,3 +1,4 @@
+Firefox:
 If you turn these off, it will speed things up!
 
 browser.ml.enable  
