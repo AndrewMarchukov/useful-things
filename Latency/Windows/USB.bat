@@ -1,6 +1,6 @@
 ;
-;More information about physically attached USB in Motherboard - irm https://raw.githubusercontent.com/MariusHeier/cpu-direct-usb/df45b230dbd44192d9bf37baaf985bba8b4957a8/cpudirect.ps1 |iex
-;
+;Information about physically attached USB in Motherboard - irm https://raw.githubusercontent.com/MariusHeier/cpu-direct-usb/df45b230dbd44192d9bf37baaf985bba8b4957a8/cpudirect.ps1 |iex
+;More USB tweaks - https://tools.mariusheier.com/
 ECHO Disabling USB Hub idle...
 DISM /Online /Add-Capability /CapabilityName:WMIC~~~~
 FOR /F %%a in ('WMIC PATH Win32_USBHub GET DeviceID^| FINDSTR /L "VID_"') DO (
