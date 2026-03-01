@@ -40,6 +40,7 @@
 ## Hijack/bypass Windows NCSI
 https://github.com/Jamesits/alwaysonline
 
+##Another tweaks
 
 #### Улучшаем TCP соединения для Windows некоторые игры до сих пор его используют к примеру Path of Exile, Once Human
 ``` Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force ```
