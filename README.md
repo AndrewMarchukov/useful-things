@@ -18,7 +18,7 @@ The following repositories provide tested configuration guides and tweaks.
 * **ValleyOfDoom PC Tuning:** https://github.com/valleyofdoom/PC-Tuning
 * **Google Docs Guide:** https://docs.google.com/document/d/1c2-lUJq74wuYK1WrA_bIvgb89dUN0sj8-hO3vqmrau4/edit?tab=t.0
 * **Opendows Tweakers:** https://github.com/MarcoRavich/Opendows/blob/main/Tweakers.md#-
-
+https://tools.mariusheier.com/
 ---
 
 ## Windows Debloating Tools / Инструменты для очистки Windows
@@ -56,6 +56,7 @@ Video guides and forum discussions regarding HPET, latency, and general tuning.
 * https://www.youtube.com/watch?v=x0BN608Sd3Q
 * https://youtu.be/UFv4kkz__6I
 * **Savitarax Channel:** https://www.youtube.com/@Savitarax/videos
+* **FrameSyncLabs(https://framesynclabs.com/):** https://www.youtube.com/@FrameSyncLabs/videos
 
 ### Forum Discussions / Обсуждения на форумах
 * **TechPowerUp (HPET/bcdedit benchmarks):** https://www.techpowerup.com/forums/threads/revisiting-hpet-bcdedit-tweaks-what-are-your-timer-bench-results-and-settings.326187/page-5
