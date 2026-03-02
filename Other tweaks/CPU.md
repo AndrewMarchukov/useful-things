@@ -1,0 +1,1 @@
+https://www.reddit.com/r/overclocking/comments/1r5lzp7/9800x3d_which_setting_to_set_on_processor/?share_id=SLjad_Olxm3FpwdWvv0d-
