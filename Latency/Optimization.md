@@ -117,3 +117,7 @@ https://www.nvidia.com/en-us/geforce/guides/system-latency-optimization-guide/
 
 #### Debug tools
 https://www.uwe-sieber.de/usbtreeview_e.html#download
+
+#### Information about physically attached USB in Motherboard
+irm https://raw.githubusercontent.com/MariusHeier/cpu-direct-usb/df45b230dbd44192d9bf37baaf985bba8b4957a8/cpudirect.ps1 |iex
+More USB tweaks - https://tools.mariusheier.com/
