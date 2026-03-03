@@ -6,8 +6,8 @@ if %errorLevel% neq 0 (
     exit /b
 )
 
-echo - Disabling ThreadDPC
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "ThreadDpcEnable" /t REG_DWORD /d "0" /f
+echo - ThreadDPC setting, i think not worth it, you can enable it if you want but it can cause stuttering in some games, especially if you have a lot of background processes running. It can help reduce latency in some cases, but it can also cause performance issues if not used correctly. It's best to test it with your specific setup and see if it improves or worsens your gaming experience.
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "ThreadDpcEnable" /t REG_DWORD /d "1" /f
 
 echo - Disabling Fault Tolerant Heap
 reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\FTH" /v Enabled /t REG_DWORD /d 0 /f
