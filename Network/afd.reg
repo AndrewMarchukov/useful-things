@@ -6,3 +6,4 @@ Windows Registry Editor Version 5.00
 "DoNotHoldNICBuffers"=dword:00000001
 "FastSendDatagramThreshold"=dword:000005dc
 "FastCopyReceiveThreshold"=dword:000005dc
+"IgnorePushBitOnReceives"=dword:00000001
