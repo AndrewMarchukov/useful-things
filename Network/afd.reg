@@ -12,5 +12,5 @@ Windows Registry Editor Version 5.00
 "IgnorePushBitOnReceives"=dword:00000001
 "IgnoreOrderlyRelease"=dword:00000001
 "DisableAddressSharing"=dword:00000001
-"FastSendDatagramThreshold"=dword:00000200
-"FastCopyReceiveThreshold"=dword:00000200
+"FastSendDatagramThreshold"=dword:000005dc
+"FastCopyReceiveThreshold"=dword:000005dc
