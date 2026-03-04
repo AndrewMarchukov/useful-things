@@ -5,3 +5,7 @@ rem # Windows Defender disable inspection of UDP connections.
 Set-MpPreference -DisableDatagramProcessing 1
 rem # Windows Defender disable the gathering and sending of performance telemetry from network protection.
 Set-MpPreference -DisableNetworkProtectionPerfTelemetry 1
+
+rem # Add TCP settings for DCTCP and ECN
+netsh int tcp set supplemental template=Internet congestionprovider=DCTCP
+netsh int tcp set global ECN=Enabled
