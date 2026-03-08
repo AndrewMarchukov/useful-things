@@ -21,6 +21,9 @@ https://github.com/beeradmoore/dlss-swapper
 
 https://github.com/SimonMacer/AnWave/releases/tag/AnWave-DLSS
 
+#### DLSS, FSR, XESS, DirectStorage update
+https://github.com/Recol/DLSS-Updater/releases?page=1
+
 #### Для мониторов
 https://www.reddit.com/r/MotionClarity/s/pAOspNGG1a This is a snake oil?
 
