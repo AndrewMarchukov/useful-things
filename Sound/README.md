@@ -23,9 +23,10 @@ Tools for enabling virtual surround sound and modded audio drivers.
 
 Resources for headphone calibration to achieve neutral sound. Use the **GraphicEQ** format for HeSuvi.
 
-Ресурсы для калибровки наушников для достижения нейтрального звука. Используйте формат **GraphicEQ** для HeSuvi.
+Ресурсы для калибровки наушников для достижения идеального звучания основанное на исследованиях Harman. Используйте формат **GraphicEQ** для HeSuvi.
 
 * **AutoEq Results:** https://github.com/jaakkopasanen/AutoEq/tree/master/results
+* **Pragmaticaudio:** https://www.pragmaticaudio.com/headphones/
 
 ---
 
