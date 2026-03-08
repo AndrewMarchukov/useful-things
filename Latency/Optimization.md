@@ -1,8 +1,10 @@
 
 Оптимизированные настройки к играм
 https://www.reddit.com/r/OptimizedGaming/
+
 последнии версии DLSS тут, можно заменять библиотеку на более новую в папке с игрой
 https://www.techpowerup.com/download/nvidia-dlss-dll/ 
+
 запуск старых dx9-dx11 игр через Vulkan дает новую жизнь старым играм
 https://github.com/doitsujin/dxvk 
 
