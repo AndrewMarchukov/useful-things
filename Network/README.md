@@ -62,3 +62,10 @@ https://www.bufferbloat.net/projects/bloat/wiki/Linux_Tips/
 
 ### Просмотр параметров адаптера
  ``` Get-NetAdapterAdvancedProperty -Name "Ethernet" ```
+
+### Prefered Ethernet adapter settings for low latency
+UDP Segmentation offload (USO) = Enabled
+Transmit buffer(tx) = 64 (lower as possible)
+Receive buffer(rx) = 1024 (doesn't matter)
+Priority = Enabled
+EVRETHING ELSE SHOULD BE IS DISABLED, power management untick all power savings
