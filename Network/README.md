@@ -45,6 +45,9 @@ https://github.com/Jamesits/alwaysonline
 25H2 BBR2 NOT working! 
 ``` netsh int tcp set supplemental template=internet congestionprovider=bbr2 ```
 
+use DCTCP instead for low latency
+``` netsh int tcp set supplemental template=internet congestionprovider=dctcp ```
+
 #### Улучшаем TCP соединения для Windows некоторые игры до сих пор его используют к примеру Path of Exile, Once Human
 https://github.com/MysticFoxDE/WINDOWS-OPTIMIZATIONS/blob/main/W10ANDW11-NETWORK-TCP-DESUBOPTIMIZATION.ps1 - for info do not use
 
