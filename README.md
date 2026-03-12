@@ -72,14 +72,3 @@ Specific fixes for known Windows issues.
 * **Windows 11 24H2 Issues:** https://answers.microsoft.com/en-us/windows/forum/all/why-does-this-happen-in-24h2/7e8145b4-f56c-452f-8bba-7da58614d6f7
 
 ---
-
-## Configuration Commands / Команды конфигурации
-
-### Enable AL HRTF (OpenAL Soft) / Включение AL HRTF
-Writes configuration to `alsoft.ini`.
-Записывает конфигурацию в `alsoft.ini`.
-
-```bat
-ECHO Enabling AL HRTF...
-ECHO hrtf ^= true > "%appdata%\alsoft.ini"
-ECHO hrtf ^= true > "C:\ProgramData\alsoft.ini"
