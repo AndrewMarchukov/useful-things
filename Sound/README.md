@@ -66,3 +66,14 @@ Fixes for audio latency and process prioritization.
 ### Audiodg Priority / Приоритет Audiodg
 Set `audiodg.exe` to High or Realtime priority using Process Lasso or the registry to reduce stuttering.
 Установите для `audiodg.exe` высокий приоритет или приоритет реального времени с помощью Process Lasso или реестра для уменьшения заиканий звука.
+
+
+### Enable AL HRTF (OpenAL Soft) / Включение AL HRTF
+Writes configuration to `alsoft.ini`.
+Записывает конфигурацию в `alsoft.ini`.
+
+```bat
+ECHO Enabling AL HRTF...
+ECHO hrtf ^= true > "%appdata%\alsoft.ini"
+ECHO hrtf ^= true > "C:\ProgramData\alsoft.ini"
+
