@@ -2,6 +2,7 @@
 ::Check Administrator Privileges
 dism >nul 2>&1 || (echo ^<Run Script In Administrator^> && pause>nul && cls&exit)
 title set-int-steer-mode
+ECHO Prefered settings is Force
 set krnl_key=HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Kernel
 mode 39,2
 choice -c 12 -n -m "[1] Force | [2] Disabled | [3] Default"
