@@ -42,11 +42,27 @@ https://github.com/Jamesits/alwaysonline
 
 ## Another tweaks
 
-25H2 BBR2 NOT working! 
-``` netsh int tcp set supplemental template=internet congestionprovider=bbr2 ```
+Windows 11 25H2 BBR2 
+```
+netsh int tcp set supplemental Template=Internet CongestionProvider=bbr2
+netsh int tcp set supplemental Template=Datacenter CongestionProvider=bbr2
+netsh int tcp set supplemental Template=Compat CongestionProvider=bbr2
+netsh int tcp set supplemental Template=DatacenterCustom CongestionProvider=bbr2
+netsh int tcp set supplemental Template=InternetCustom CongestionProvider=bbr2
+netsh int ipv6 set gl loopbacklargemtu=disable
+netsh int ipv4 set gl loopbacklargemtu=disable
+```
 
-use DCTCP instead for low latency
-``` netsh int tcp set supplemental template=internet congestionprovider=dctcp ```
+
+if BBR2 not working or old windows installed you can use DCTCP instead
+```
+netsh int tcp set supplemental template=internet congestionprovider=dctcp 
+```
+
+how to check which congestion algorithm installed
+```
+Get-NetTCPSetting | Select SettingName, CongestionProvider
+```
 
 #### Улучшаем TCP соединения для Windows некоторые игры до сих пор его используют к примеру Path of Exile, Once Human
 https://github.com/MysticFoxDE/WINDOWS-OPTIMIZATIONS/blob/main/W10ANDW11-NETWORK-TCP-DESUBOPTIMIZATION.ps1 - for info do not use
