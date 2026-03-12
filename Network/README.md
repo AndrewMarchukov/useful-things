@@ -92,5 +92,5 @@ Receive buffer(rx) = 1024 (doesn't matter)
 
 Priority = Enabled
 
-EVRETHING ELSE SHOULD BE IS DISABLED, power management untick all power savings
+EVRETHING ELSE SHOULD BE DISABLED, in power management untick all power savings
 
