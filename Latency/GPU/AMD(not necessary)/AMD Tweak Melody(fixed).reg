@@ -10,7 +10,6 @@ Windows Registry Editor Version 5.00
 "DisableVCEPowerGating"=dword:00000001
 "DisablePowerGating"=dword:00000001
 "DisableDrmdmaPowerGating"=dword:00000001
-"DisableDMACopy"=dword:00000001
 "DisableBlockWrite"=dword:00000000
 "StutterMode"=dword:00000000
 "PP_GPUPowerDownEnabled"=dword:00000000

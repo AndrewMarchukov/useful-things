@@ -3,6 +3,8 @@ Title General DirectX Tweaks (2)
 cd %systemroot%\system32
 call :IsAdmin
 
+::The author has taken developer terminology from the Microsoft WDDM documentation and formatted them as registry keys. Executing this will harmlessly bloat your registry with dead text strings, but it will yield absolutely zero performance or latency benefits because the Windows Kernel is ignoring them entirely.
+
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\DXGKrnl" /v "CreateGdiPrimaryOnSlaveGPU" /t REG_DWORD /d "1" /f
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\DXGKrnl" /v "DriverSupportsCddDwmInterop" /t REG_DWORD /d "1" /f
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\DXGKrnl" /v "DxgkCddSyncDxAccess" /t REG_DWORD /d "1" /f
