@@ -110,20 +110,26 @@ Latency\TimerResolutionTweak
 The behavior of the timer resolution on Windows changed with the release of Windows 10 v2004 to be per-process instead of system-wide as previously. This resulted in processes not setting a specific timer resolution on their own falls back to using the default timer resolution of 15.625ms (64 Hz) which can have various effects in games which were developed with the mistaken assumption of the timer resolution being much higher. An example of a common issue of a game using the default timer resolution is an unexpected 64 FPS cap/limit.
 
 #### Audio Latency
+
 Round-trip audio latency tester https://superpowered.com/webbrowserlatency
 
 Low Latency tool https://github.com/spddl/LowAudioLatency
 
 #### Latency guides
+
 https://www.nvidia.com/en-us/geforce/guides/system-latency-optimization-guide/
 
+#### Information about physically attached USB in Motherboard
 
-#### Debug tools
 https://www.uwe-sieber.de/usbtreeview_e.html#download
 
-#### Information about physically attached USB in Motherboard
+
 ```
 irm https://raw.githubusercontent.com/MariusHeier/cpu-direct-usb/df45b230dbd44192d9bf37baaf985bba8b4957a8/cpudirect.ps1 |iex
 ```
 
 More USB tweaks - https://tools.mariusheier.com/
+
+#### Windows registry info
+
+https://github.com/nohuto/win-registry
