@@ -32,10 +32,15 @@ https://www.displayport.org/product-category/cables-adaptors/?ps=ugreen
 
 Калибровка цветов - https://bitbucket.org/CalibrationTools/calibration-tools/src/master/
 
+#### difference betwen display modes in windows 
+https://youtu.be/JLKzp8WMcqk
 
-Rebar Force to all Games
+
+#### Rebar Force to all Games (NVIDIA)
 ✅ Force Resizable BAR (ReBAR) with NVIDIA Profile Inspector
 rbar size limit - 0x0000000060000000 
+
+
 #### Shader cache
 
 🛠️ Commands & Paths Used
