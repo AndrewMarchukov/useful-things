@@ -13,3 +13,7 @@ browser.tabs.groups.smart.enabled
 browser.tabs.groups.smart.userEnabled  
 extensions.ml.enabled  
 browser.search.visualSearch.featureGate
+
+For privacy, tracking:
+privacy.fingerprintingProtection true
+privacy.resistFingerprinting true
