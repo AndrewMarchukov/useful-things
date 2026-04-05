@@ -62,13 +62,3 @@ Video guides and forum discussions regarding HPET, latency, and general tuning.
 * **TechPowerUp (HPET/bcdedit benchmarks):** https://www.techpowerup.com/forums/threads/revisiting-hpet-bcdedit-tweaks-what-are-your-timer-bench-results-and-settings.326187/page-5
 
 ---
-
-## Troubleshooting / Устранение неполадок
-
-Specific fixes for known Windows issues.
-
-Специфические исправления известных проблем Windows.
-
-* **Windows 11 24H2 Issues:** https://answers.microsoft.com/en-us/windows/forum/all/why-does-this-happen-in-24h2/7e8145b4-f56c-452f-8bba-7da58614d6f7
-
----
