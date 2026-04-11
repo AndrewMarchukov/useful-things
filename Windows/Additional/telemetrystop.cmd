@@ -9,38 +9,6 @@ pause >nul
 goto :eof
 )
 
-for /f "tokens=6 delims=[]. " %%# in ('ver') do set winbuild=%%#
-if %winbuild% gtr 7601 goto :proceed
-
-:: EOS 2019-12 KB4530734
-reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\EOSNotify /f /v DiscontinueEOS /t REG_DWORD /d 1
-reg add HKCU\Software\Microsoft\Windows\CurrentVersion\EOSNotify /f /v DiscontinueEOS /t REG_DWORD /d 1
-reg add HKCU\Software\Microsoft\Windows\CurrentVersion\EOSNotify /f /v DontRemindMe /t REG_DWORD /d 1
-reg add HKCU\Software\Microsoft\Windows\CurrentVersion\EOSNotify /f /v LastRunTimestamp /t REG_QWORD /d 0x0
-reg add HKCU\Software\Microsoft\Windows\CurrentVersion\EOSNotify /f /v TimestampOverride /t REG_QWORD /d 0x0
-schtasks /Change /DISABLE /TN "Microsoft\Windows\Setup\EOSNotify"
-schtasks /Change /DISABLE /TN "Microsoft\Windows\Setup\EOSNotify2"
-schtasks /Delete /F /TN "Microsoft\Windows\Setup\EOSNotify"
-schtasks /Delete /F /TN "Microsoft\Windows\Setup\EOSNotify2"
-
-:: EOS KB4493132/KB4524752
-reg add HKCU\Software\Microsoft\Windows\CurrentVersion\SipNotify /f /v DontRemindMe /t REG_DWORD /d 1
-reg add HKCU\Software\Microsoft\Windows\CurrentVersion\SipNotify /f /v DateModified /t REG_QWORD /d 0x0
-reg add HKCU\Software\Microsoft\Windows\CurrentVersion\SipNotify /f /v LastShown /t REG_QWORD /d 0x0
-schtasks /Change /DISABLE /TN "Microsoft\Windows\End Of Support\Notify1"
-schtasks /Change /DISABLE /TN "Microsoft\Windows\End Of Support\Notify2"
-schtasks /Delete /F /TN "Microsoft\Windows\End Of Support\Notify1"
-schtasks /Delete /F /TN "Microsoft\Windows\End Of Support\Notify2"
-set hosts=%windir%\system32\drivers\etc\hosts
-findstr /i "RE2JgkA" %hosts% 1>nul 2>nul || (
-attrib -r %hosts%
-echo 127.0.0.1 query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE2JgkA>>%hosts%
-attrib +r %hosts%
-attrib -a %hosts%
-)
-rd /s /q "%LocalAppData%\Microsoft\Windows\SipNotify" 1>nul 2>nul
-
-:proceed
 :: Unified Telemetry Client
 sc.exe config DiagTrack start= disabled
 sc.exe stop DiagTrack
@@ -120,6 +88,15 @@ reg add "HKCU\Software\Policies\Microsoft\Windows\WindowsCopilot" /v TurnOffWind
 reg add "HKLM\SOFTWARE\Microsoft\Input\TIPC" /v "Enabled" /t REG_DWORD /d 0 /f
 
 
+@echo Variables to Disable Telemetry
+setx POWERSHELL_TELEMETRY_OPTOUT 1 >nul 2>&1
+setx DOTNET_CLI_TELEMETRY_OPTOUT 1 >nul 2>&1
+
+@echo Error Reporting
+reg add "HKCU\Software\Microsoft\Windows\Windows Error Reporting" /v "DontSendAdditionalData" /t REG_DWORD /d "1" /f >nul 2>&1
+
+@echo Wdf
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Wdf" /v "WdfGlobalLogsDisabled" /t REG_DWORD /d "1" /f >nul 2>&1
 
 echo.
 echo.
