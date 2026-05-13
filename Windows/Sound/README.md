@@ -27,7 +27,7 @@ Resources for headphone calibration to achieve neutral sound. Use the **GraphicE
 
 * **AutoEq Results:** https://github.com/jaakkopasanen/AutoEq/tree/master/results
 * **Pragmaticaudio:** https://www.pragmaticaudio.com/headphones/
-
+* **peqdb:**  https://peqdb.com/
 ---
 
 ## Microphone Noise Suppression / Шумоподавление микрофона
