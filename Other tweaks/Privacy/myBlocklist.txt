@@ -1,6 +1,4 @@
 0.0.0.0 galaxy-log.gog.com
-0.0.0.0 cdp.cloud.unity3d.com
-0.0.0.0 config.uca.cloud.unity3d.com
 0.0.0.0 www.userbenchmark.com
 0.0.0.0 fern.xboxservices.com
 0.0.0.0 api.gameanalytics.com
@@ -9,10 +7,26 @@
 0.0.0.0 host-91-222-185-217.gog.com
 0.0.0.0 host-91-222-185-218.gog.com
 0.0.0.0 host-91-222-185-219.gog.com
-0.0.0.0 168.172.107.34.bc.googleusercontent.com
-0.0.0.0 40.113.111.34.bc.googleusercontent.com
 0.0.0.0 14.181.107.34.bc.googleusercontent.com
 
 0.0.0.0 gpp.krafton.io
 0.0.0.0 o1251021.ingest.us.sentry.io
 0.0.0.0 0.81.160.34.bc.googleusercontent.com
+
+0.0.0.0 unity-data-gke-prd-gateway.cdp.internal.unity3d.com
+0.0.0.0 config.uca.cloud.unity3d.com
+0.0.0.0 cdp.cloud.unity3d.com
+0.0.0.0 perf-events.cloud.unity3d.com
+0.0.0.0 collect.analytics.unity3d.com
+0.0.0.0 operate-sdk-telemetry.unity3d.com
+0.0.0.0 a.nel.cloudflare.com
+0.0.0.0 eleventhhourgames.zendesk.com
+0.0.0.0 8.78.190.35.bc.googleusercontent.com
+0.0.0.0 34.214.149.34.bc.googleusercontent.com
+0.0.0.0 geo-balanced-collect.deltadna.net
+0.0.0.0 remote-config-prd.uca.cloud.unity3d.com
+0.0.0.0 pls.prd.mz.internal.unity3d.com
+0.0.0.0 40.113.111.34.bc.googleusercontent.com
+0.0.0.0 168.172.107.34.bc.googleusercontent.com
+0.0.0.0 98.127.149.34.bc.googleusercontent.com
+0.0.0.0 148.113.96.34.bc.googleusercontent.com
