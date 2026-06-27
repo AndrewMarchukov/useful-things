@@ -1,6 +1,13 @@
 Windows Registry Editor Version 5.00
 
+; Boost dwm.exe (Desktop Window Manager / compositor) for lower latency.
+; NOTE: the IFEO registry method alone canNOT grant these levels - CpuPriorityClass=4
+; (Realtime) needs SeIncreaseBasePriorityPrivilege, and IoPriority via IFEO is capped at
+; Normal(2). So by registry alone this effectively lands at High / Normal, not Realtime/High.
+; To actually apply Realtime CPU + High I/O for dwm, use Process Lasso (its governor runs
+; with the privilege and re-applies the priority persistently).
+; Documented dwm-specific alternative: DwmEnableMMCSS registers dwm threads with MMCSS for
+; realtime scheduling.
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\dwm.exe\PerfOptions]
 "CpuPriorityClass"=dword:00000004
 "IoPriority"=dword:00000003
-

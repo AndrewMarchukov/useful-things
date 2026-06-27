@@ -5,7 +5,7 @@ title set-int-steer-mode
 ECHO Prefered settings is Force
 set krnl_key=HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Kernel
 mode 39,2
-choice -c 12 -n -m "[1] Force | [2] Disabled | [3] Default"
+choice -c 123 -n -m "[1] Force | [2] Disabled | [3] Default"
 if %errorlevel% equ 1 (
 	:: KiInterruptSteeringFlags
 	:: bit 0 = default, bit 1 = disabled, bit 2 = force enabled
@@ -22,7 +22,7 @@ if %errorlevel% equ 2 (
 	powercfg -setacvalueindex scheme_current SUB_INTSTEER MODE 1 >nul
 	powercfg -s scheme_current
 )
-if %errorlevel% equ 2 (
+if %errorlevel% equ 3 (
 	reg delete "%krnl_key%" /v InterruptSteeringFlags /f >nul 2>&1
 	
 	:: Default

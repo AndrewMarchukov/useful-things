@@ -2,9 +2,9 @@ rem # Packet Scheduler Timer Resolution
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Psched" /v "TimerResolution" /t REG_DWORD /d "1" /f
 
 rem # Windows Defender disable inspection of UDP connections.
-Set-MpPreference -DisableDatagramProcessing 1
+powershell -command "Set-MpPreference -DisableDatagramProcessing $true"
 rem # Windows Defender disable the gathering and sending of performance telemetry from network protection.
-Set-MpPreference -DisableNetworkProtectionPerfTelemetry 1
+powershell -command "Set-MpPreference -DisableNetworkProtectionPerfTelemetry $true"
 
 rem # TCP settings for BBR2 and ECN
 netsh int tcp set supplemental Template=Internet CongestionProvider=bbr2
@@ -20,7 +20,7 @@ rem # TCP settings for DCTCP and ECN if BBR2 not working
 ::netsh int tcp set global ECN=Enabled
 
 rem #Disable power-saving features
-Disable-NetAdapterPowerManagement -Name "Ethernet"
+powershell -command "Disable-NetAdapterPowerManagement -Name 'Ethernet'"
 
 
 @echo Network
@@ -119,13 +119,13 @@ for /f %%a in ('reg query "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972
         reg add "%%i" /v "*FlowControl" /t REG_SZ /d "0" /f >nul 2>&1
     )
     for /f %%i in ('reg query "%%a" /v "WolShutdownLinkSpeed" ^| findstr "HKEY"') do (
-        reg add "%%i" /v "WolShutdownLinkSpeed" /t REG_SZ /d "2" /f >nul 2>&1
+        reg add "%%i" /v "WolShutdownLinkSpeed" /t REG_SZ /d "0" /f >nul 2>&1
     )
     for /f %%i in ('reg query "%%a" /v "WakeOnMagicPacketFromS5" ^| findstr "HKEY"') do (
-        reg add "%%i" /v "WakeOnMagicPacketFromS5" /t REG_SZ /d "2" /f >nul 2>&1
+        reg add "%%i" /v "WakeOnMagicPacketFromS5" /t REG_SZ /d "0" /f >nul 2>&1
     )
     for /f %%i in ('reg query "%%a" /v "WolShutdownLinkSpeed" ^| findstr "HKEY"') do (
-        reg add "%%i" /v "WolShutdownLinkSpeed" /t REG_SZ /d "2" /f >nul 2>&1
+        reg add "%%i" /v "WolShutdownLinkSpeed" /t REG_SZ /d "0" /f >nul 2>&1
     )
     for /f %%i in ('reg query "%%a" /v "*PMNSOffload" ^| findstr "HKEY"') do (
         reg add "%%i" /v "*PMNSOffload" /t REG_SZ /d "0" /f >nul 2>&1
@@ -217,11 +217,11 @@ for /f %%a in ('reg query "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972
     for /f %%i in ('reg query "%%a" /v "*UdpRsc" ^| findstr "HKEY"') do (
         reg add "%%i" /v "*UdpRsc" /t REG_SZ /d "0" /f >nul 2>&1
     )
-    for /f %%i in ('reg query "%%a" /v "**UsoIPv4" ^| findstr "HKEY"') do (
-        reg add "%%i" /v "*UsoIPv4" /t REG_SZ /d "0" /f >nul 2>&1
+    for /f %%i in ('reg query "%%a" /v "*UsoIPv4" ^| findstr "HKEY"') do (
+        reg add "%%i" /v "*UsoIPv4" /t REG_SZ /d "1" /f >nul 2>&1
     )
     for /f %%i in ('reg query "%%a" /v "*UsoIPv6" ^| findstr "HKEY"') do (
-        reg add "%%i" /v "*UsoIPv6" /t REG_SZ /d "0" /f >nul 2>&1
+        reg add "%%i" /v "*UsoIPv6" /t REG_SZ /d "1" /f >nul 2>&1
     )
     for /f %%i in ('reg query "%%a" /v "*RscIPv6" ^| findstr "HKEY"') do (
         reg add "%%i" /v "*RscIPv6" /t REG_SZ /d "0" /f >nul 2>&1
@@ -237,15 +237,6 @@ for /f %%a in ('reg query "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972
     )
     for /f %%i in ('reg query "%%a" /v "*IPsecOffloadV1IPv4" ^| findstr "HKEY"') do (
         reg add "%%i" /v "*IPsecOffloadV1IPv4" /t REG_SZ /d "0" /f >nul 2>&1
-    )
-    for /f %%i in ('reg query "%%a" /v "*LsoV1IPv4" ^| findstr "HKEY"') do (
-        reg add "%%i" /v "*LsoV1IPv4" /t REG_SZ /d "0" /f >nul 2>&1
-    )
-    for /f %%i in ('reg query "%%a" /v "*LsoV2IPv4" ^| findstr "HKEY"') do (
-        reg add "%%i" /v "*LsoV2IPv4" /t REG_SZ /d "0" /f >nul 2>&1
-    )
-    for /f %%i in ('reg query "%%a" /v "*LsoV2IPv6" ^| findstr "HKEY"') do (
-        reg add "%%i" /v "*LsoV2IPv6" /t REG_SZ /d "0" /f >nul 2>&1
     )
     for /f %%i in ('reg query "%%a" /v "*IPChecksumOffloadIPv4" ^| findstr "HKEY"') do (
         reg add "%%i" /v "*IPChecksumOffloadIPv4" /t REG_SZ /d "3" /f >nul 2>&1
@@ -274,11 +265,12 @@ for %%a in (TxIntDelay TxAbsIntDelay RxIntDelay RxAbsIntDelay) do (
 
 
 @echo Network Binding
+rem NOTE: disabling ms_msclient (Client for MS Networks) and ms_server (File and Printer Sharing) breaks SMB file sharing on this adapter.
 powershell Disable-NetAdapterBinding -Name "Ethernet" -ComponentID ms_lldp; Disable-NetAdapterBinding -Name "Ethernet" -ComponentID ms_msclient; Disable-NetAdapterBinding -Name "Ethernet" -ComponentID ms_lltdio; Disable-NetAdapterBinding -Name "Ethernet" -ComponentID ms_implat; Disable-NetAdapterBinding -Name "Ethernet" -ComponentID ms_rspndr; Disable-NetAdapterBinding -Name "Ethernet" -ComponentID ms_server >nul 2>&1
 
 
 @echo Network Coalescing
-powershell Set-NetOffloadGlobalSetting -ReceiveSegmentCoalescing Enable >nul 2>&1
+powershell Set-NetOffloadGlobalSetting -ReceiveSegmentCoalescing Disable >nul 2>&1
 powershell Set-NetOffloadGlobalSetting -PacketCoalescingFilter Disable >nul 2>&1
 
 

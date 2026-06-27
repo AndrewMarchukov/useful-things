@@ -1,6 +1,10 @@
 Windows Registry Editor Version 5.00
 
+; SplitLargeCaches (undocumented kernel value, cache-aware scheduling).
+; 0 = do NOT split a large shared L3 into separate scheduling groups -> keeps data-sharing
+;     threads in the same last-level-cache (LLC) domain, less cache bouncing.
+;     Preferred on X3D / single-large-L3 CPUs for gaming (alufena recommends 0).
+; 1 = split the large cache into multiple scheduling groups.
+; Contested setting - no published benchmark settles it; test 0 vs 1 with LatencyMon.
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel]
-"SplitLargeCaches"=dword:00000001
-
-
+"SplitLargeCaches"=dword:00000000

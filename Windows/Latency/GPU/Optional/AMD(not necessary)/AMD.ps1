@@ -91,3 +91,13 @@ Function AMDGPUTweaks {
 	   Write-Output "No AMD GPU Registry entry Found! Skipping..."
 	   }
 }
+
+# Elevate if not admin, then run the tweaks
+$isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+if (-not $isAdmin) {
+    Start-Process powershell.exe -ArgumentList "-ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
+    exit
+}
+
+AMDGPUTweaks
+Read-Host "Done. Press Enter to exit"

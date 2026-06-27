@@ -1,6 +1,6 @@
 Windows Registry Editor Version 5.00
 
-[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\AFD\Parameters]
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\AFD\Parameters]
 "DefaultSendWindow"=dword:00080000
 "DefaultReceiveWindow"=dword:00080000
 "DoNotHoldNICBuffers"=dword:00000001
