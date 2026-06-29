@@ -97,6 +97,10 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows" /v "TimerCoa
 echo - Extend Windows 11 LowLatency profile CPU-boost window to 6 seconds (max-clock burst on app launch/boot)
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\Profile\Events\{54533251-82be-4824-96c1-47b60b740d00}\{0DA965DC-8FCF-4c0b-8EFE-8DD5E7BC959A}\{7E01ADEF-81E6-4e1b-8075-56F373584694}" /v "TimeLimitInSeconds" /t REG_DWORD /d "6" /f
 
+echo - svchost split threshold (autodetect = installed RAM in KB, per tenforums table; default is 0x380000 ~3.5GB)
+for /f %%i in ('powershell -NoProfile -Command "[math]::Round((Get-CimInstance Win32_PhysicalMemory ^| Measure-Object -Property Capacity -Sum).Sum/1KB)"') do set "RAMKB=%%i"
+reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d %RAMKB% /f
+
 echo - Rebuild Performance Counters
 lodctr /r >nul 2>&1
 lodctr /r >nul 2>&1
