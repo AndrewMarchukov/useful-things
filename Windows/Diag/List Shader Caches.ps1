@@ -67,8 +67,6 @@ foreach ($folder in $folders) {
         $sizeMB = "{0:N2}" -f ($size / 1MB)
         Write-Host "$folder - Size: $sizeMB MB"
         $totalSize += $size
-    } else {
-        Write-Host "$folder - Folder not found"
     }
 }
 
