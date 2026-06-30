@@ -1,3 +1,9 @@
+# Self-elevate to Administrator if not already running elevated
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Start-Process powershell.exe -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
+    exit
+}
+
 $sep = '=' * 80
 
 $Host.UI.RawUI.BackgroundColor = 'Black'
