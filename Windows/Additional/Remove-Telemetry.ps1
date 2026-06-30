@@ -13,9 +13,6 @@ $targets = @(
     # Google PEH telemetry only (Daily/Metrics)
     @{ Path='\GoogleUserPEH\'; Name='*' }
 
-    # Other third-party telemetry
-    @{ Path='\Mozilla\'; Name='Firefox Default Browser Agent' }
-
     # Windows telemetry
     @{ Path='\Microsoft\Windows\Application Experience\';   Name='MareBackup' }
     @{ Path='\Microsoft\Windows\Application Experience\';   Name='StartupAppTask' }
