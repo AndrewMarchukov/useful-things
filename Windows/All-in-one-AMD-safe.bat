@@ -53,7 +53,6 @@ call :run "Latency\CPU\all_proc_for_PBO.ps1"
 
 :: ---------- Network (Optional excluded) ----------
 call :run "Network\afd.reg"
-call :run "Network\pnpcap.bat"
 call :run "Network\NetworkTweaks.bat"
 
 :: ---------- Additional ----------

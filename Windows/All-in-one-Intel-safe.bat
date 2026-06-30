@@ -50,7 +50,6 @@ call :run "Latency\System\TimerResolutionTweak\GlobalTimerResolutionRequests_on.
 
 :: ---------- Network (Optional excluded) ----------
 call :run "Network\afd.reg"
-call :run "Network\pnpcap.bat"
 call :run "Network\NetworkTweaks.bat"
 
 :: ---------- Additional ----------

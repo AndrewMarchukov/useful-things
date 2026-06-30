@@ -21,7 +21,7 @@ rem # TCP settings for DCTCP and ECN if BBR2 not working
 
 rem #Disable power-saving features
 powershell -command "Disable-NetAdapterPowerManagement -Name 'Ethernet'"
-
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" /v "DefaultPnPCapabilities" /t REG_DWORD /d "24" /f
 
 @echo Network
 for /f %%a in ('reg query "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}" /v "*SpeedDuplex" /s ^| findstr  "HKEY"') do (
