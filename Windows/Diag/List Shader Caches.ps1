@@ -4,6 +4,12 @@ if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
     exit
 }
 
+$sep = '=' * 80
+
+$Host.UI.RawUI.BackgroundColor = 'Black'
+$Host.UI.RawUI.ForegroundColor = 'Green'
+Clear-Host
+
 $folders = @(
     "C:\Program Files (x86)\Steam\steamapps\shadercache",
     "$env:LOCALAPPDATA\D3DSCache",
@@ -51,6 +57,10 @@ $folders = @(
 
 $totalSize = 0
 
+Write-Host "`n$sep" -ForegroundColor Cyan
+Write-Host "[*] SHADER & PREFETCH CACHES" -ForegroundColor Yellow
+Write-Host "$sep`n" -ForegroundColor Cyan
+
 foreach ($folder in $folders) {
     if (Test-Path $folder) {
         $size = (Get-ChildItem $folder -Recurse -File | Measure-Object -Property Length -Sum).Sum
@@ -66,9 +76,10 @@ foreach ($folder in $folders) {
 $totalSizeMB = "{0:N2}" -f ($totalSize / 1MB)
 $totalSizeGB = "{0:N2}" -f ($totalSize / 1GB)
 
-Write-Host ""
-Write-Host "============================================="
-Write-Host "TOTAL SIZE OF ALL SHADER AND PREFETCH CACHES:"
+Write-Host "`n$sep" -ForegroundColor Cyan
+Write-Host "TOTAL SIZE OF ALL SHADER AND PREFETCH CACHES" -ForegroundColor Yellow
+Write-Host "$sep" -ForegroundColor Cyan
 Write-Host "$totalSizeMB MB ($totalSizeGB GB)"
-Write-Host "============================================="
-pause
+Write-Host "$sep`n" -ForegroundColor Cyan
+
+Read-Host "`nDone. Press Enter to close"
