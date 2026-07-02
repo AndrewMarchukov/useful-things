@@ -15,13 +15,20 @@ between builds, re-verify after every feature update.
   LowLatency-event extension already in `..\Latency\System\Main-Latency-Tweaks.bat`.
   Needs Build 26200.8524+ and ViVeTool.exe next to the script:
   https://github.com/thebookisclosed/ViVe/releases
+- **Enable Xbox Mode.bat** — the handheld Full Screen Experience on desktop ahead of the
+  July 14 rollout: Xbox shell as a console-like gaming mode with fewer background
+  processes (feature IDs 58989070, 59765208; toggle appears in Settings > Gaming >
+  Xbox mode after reboot). Controller-first by design — desktop keyboard+mouse benefit
+  unproven, measure before keeping. Re-evaluate the Game Mode guidance in
+  `..\Diag\Check VBS.ps1` after trying it.
 
 ## Watchlist
 
-- **Xbox mode** (July 14, 2026 update): the handheld Full Screen Experience comes to
-  desktop — Xbox shell as the gaming mode with fewer background processes, a Windows-native
-  version of what this repo approximates by hand. Re-evaluate the Game Mode guidance in
-  `..\Diag\Check VBS.ps1` after it lands.
+- **System-wide low-latency audio profile** (26H2 preview, Build 26220.8690): a native
+  Settings toggle (System > Sound > Advanced) that bypasses audio processing/buffer
+  stages — 4-8 ms lower round-trip latency in DAWs, 10-15% on USB headsets. Insider-only
+  for now, no public feature ID; when 26H2 ships, compare against the LAL tool
+  (`..\Latency\System\LAL`) and keep whichever measures better.
 - **Update currency as a tweak**: KB5074109 (early 2026) fixed a scheduler regression
   causing GPU micro-stutter invisible to FPS counters; DirectStorage streaming also improved.
   Staying current has delivered more real gaming gains in 2026 than any registry value —

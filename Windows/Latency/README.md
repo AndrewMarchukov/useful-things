@@ -24,7 +24,8 @@ set-int-steer-mode.bat "Force" mode only helps when cores are actually reserved 
 interrupts are pinned onto them - the full recipe:
 
 1. Reserve the last 1-2 physical cores: https://github.com/valleyofdoom/ReservedCpuSets (reboot).
-2. Pin GPU + NIC MSI interrupts onto the reserved cores with GoInterruptPolicy (link above).
+2. Pin GPU + NIC + USB (xHCI) controller MSI interrupts onto the reserved cores with
+   GoInterruptPolicy (link above) - the xHCI is the interrupt source carrying your mouse packets.
 3. Run Latency\System\set-int-steer-mode.bat (Force mode) - its documented prerequisite is now met.
 4. Verify with LatencyMon per-CPU view: game cores go quiet, reserved cores absorb the interrupts.
 

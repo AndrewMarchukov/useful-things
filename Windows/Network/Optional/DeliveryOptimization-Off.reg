@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; Delivery Optimization: DownloadMode 0 = plain HTTP, no P2P peering.
+; DO peering UPLOADS update chunks to other PCs mid-session - upstream saturation
+; means bufferbloat, which shows up as in-game ping spikes no TCP tweak can fix.
+; Zero downside on a single gaming PC.
+; Docs: learn.microsoft.com "Delivery Optimization reference" (DODownloadMode)
+; Revert:
+;   reg delete "HKLM\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization" /v DODownloadMode /f
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization]
+"DODownloadMode"=dword:00000000

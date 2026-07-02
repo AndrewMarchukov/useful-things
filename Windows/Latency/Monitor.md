@@ -62,3 +62,15 @@ Here is the AMD version.
     Radeon Chill - set a global cap based on your refresh rate (formula above) with Chill you set the "min" and "max" FPS to the same number
 
     Anti Lag 2 - always on in game when available
+
+#### Mixed refresh rates on multi-monitor
+
+Gaming at high Hz on the primary while a 60Hz secondary plays video (YouTube, Discord
+stream) causes DWM composition contention and frame-pacing hitches. Match refresh rates
+across monitors when possible (or run the secondary at a clean divisor of the primary),
+and avoid video playback on the secondary during competitive play.
+
+NOTE: GPU\Additional\Fixes\Disable_MPO.reg makes mixed-refresh stutter WORSE - Multiplane
+Overlay is exactly the mechanism that lets secondary-monitor content bypass full DWM
+composition. MPO-off is a legitimate fix for its flicker bugs, but if mixed-refresh
+stutter appears, re-enabling MPO is the first thing to test.

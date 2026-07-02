@@ -6,6 +6,12 @@ One batch at a time. Measure between. Keep receipts.
 ## 0. Baseline (before ANY tweak)
 
 - GPU driver (NVCleanstall), chipset driver, EXPO/XMP in BIOS (`Latency/BIOS.md`).
+- Smart App Control: fresh 24H2/25H2 installs run SAC in evaluation mode. It blocks
+  unsigned tools (half this repo's toolkit), and turning it off is PERMANENT until a
+  reinstall - decide here in step 0, deliberately, not mid-setup.
+- Pagefile: keep a small fixed pagefile (4-8 GB) even with 32 GB+ RAM. Fully disabling
+  it crashes commit-heavy titles (UE5 games, Star Citizen); "no pagefile = faster" is
+  folklore. `Diag/Check Pagefile...ps1` reports the current state.
 - Capture the baseline numbers first - see "Measurement loop" below. A tweak without
   a baseline is a belief, not a result.
 
