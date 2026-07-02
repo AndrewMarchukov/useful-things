@@ -18,6 +18,20 @@ game's profile back to "Prefer native".
 Настройка прерывайний 
 https://github.com/spddl/GoInterruptPolicy/releases
 
+#### Core reservation recipe (pairs with System\set-int-steer-mode.bat)
+
+set-int-steer-mode.bat "Force" mode only helps when cores are actually reserved and
+interrupts are pinned onto them - the full recipe:
+
+1. Reserve the last 1-2 physical cores: https://github.com/valleyofdoom/ReservedCpuSets (reboot).
+2. Pin GPU + NIC MSI interrupts onto the reserved cores with GoInterruptPolicy (link above).
+3. Run Latency\System\set-int-steer-mode.bat (Force mode) - its documented prerequisite is now met.
+4. Verify with LatencyMon per-CPU view: game cores go quiet, reserved cores absorb the interrupts.
+
+Caveats: CPU sets are a soft policy (a fully starved workload can still spill onto reserved
+cores); the game loses those cores - worth it on 8+ cores for esports titles, questionable
+on 6; on dual-CCD X3D reserve on the non-V-Cache CCD only.
+
 
 Ryzen 1-3 gen and old intel DPC Latency fix 
 

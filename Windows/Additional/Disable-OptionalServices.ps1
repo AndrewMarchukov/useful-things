@@ -13,6 +13,8 @@ if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
 }
 
 # Base service names. Per-user services use the template name (no _<luid> suffix).
+# NEVER add GameInputSvc here: it is Microsoft's modern input stack (GameInput API) -
+# controllers/input in newer titles break without it.
 $targets = 'whesvc','DusmSvc','SSDPSRV','lmhosts','StiSvc','CDPSvc','CDPUserSvc'
 
 $reg   = 'HKLM:\SYSTEM\CurrentControlSet\Services'
