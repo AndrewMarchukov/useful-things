@@ -6,7 +6,14 @@ https://www.reddit.com/r/OptimizedGaming/
 https://www.techpowerup.com/download/nvidia-dlss-dll/ 
 
 запуск старых dx9-dx11 игр через Vulkan дает новую жизнь старым играм
-https://github.com/doitsujin/dxvk 
+https://github.com/doitsujin/dxvk
+
+NVIDIA + DXVK/Vulkan/OpenGL on Windows: set NVIDIA Control Panel > Manage 3D Settings >
+"Vulkan/OpenGL present method" = "Prefer layered on DXGI swapchain" - Vulkan/GL games then
+present via the DXGI flip model (windowed G-Sync/VRR works, lower input lag). DXVK's tracker
+calls this critical on Windows: https://github.com/doitsujin/dxvk/issues/5171
+Needs driver 560.94+ (older drivers stuttered with it); if a game misbehaves, set that
+game's profile back to "Prefer native".
 
 Настройка прерывайний 
 https://github.com/spddl/GoInterruptPolicy/releases
@@ -129,6 +136,8 @@ https://www.nvidia.com/en-us/geforce/guides/system-latency-optimization-guide/
 Intel PresentMon - https://github.com/GameTechDev/PresentMon (GUI: CapFrameX - https://github.com/CXWorld/CapFrameX)
 
 The game should present as "Hardware: Independent Flip". Any "Composed: ..." mode means the low-latency path is not engaged.
+
+NVIDIA FrameView measures end-to-end PC latency (PCL) in Reflex-capable games - stronger latency verification than frame times alone: https://www.nvidia.com/en-us/geforce/technologies/frameview/
 
 #### Information about physically attached USB in Motherboard
 
