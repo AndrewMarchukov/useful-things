@@ -115,9 +115,20 @@ Round-trip audio latency tester https://superpowered.com/webbrowserlatency
 
 Low Latency tool https://github.com/spddl/LowAudioLatency
 
+#### Anti-cheat warning (Valorant/Vanguard, FACEIT)
+
+Riot Vanguard requires TPM 2.0 + Secure Boot on Windows 11 - VAN9001/VAN9003 errors without them. Do NOT disable TPM or Secure Boot in BIOS while tweaking if you play these titles.
+https://support-valorant.riotgames.com/hc/en-us/articles/22291331362067-Vanguard-Restrictions
+
 #### Latency guides
 
 https://www.nvidia.com/en-us/geforce/guides/system-latency-optimization-guide/
+
+#### Verify presentation mode (checks MPO disable + windowed-games flip tweaks)
+
+Intel PresentMon - https://github.com/GameTechDev/PresentMon (GUI: CapFrameX - https://github.com/CXWorld/CapFrameX)
+
+The game should present as "Hardware: Independent Flip". Any "Composed: ..." mode means the low-latency path is not engaged.
 
 #### Information about physically attached USB in Motherboard
 

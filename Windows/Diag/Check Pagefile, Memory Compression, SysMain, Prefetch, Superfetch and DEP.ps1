@@ -107,8 +107,8 @@ try {
 # === DEP (Data Execution Prevention) ===
 Write-Section "DEP (Data Execution Prevention)"
 try {
-    $depPolicy = wmic OS Get DataExecutionPrevention_SupportPolicy /value | Out-String
-    $depPolicyValue = ($depPolicy -split "=")[1] -as [int]
+    # wmic is removed in Win11 24H2/25H2 - query CIM directly
+    $depPolicyValue = [int](Get-CimInstance Win32_OperatingSystem).DataExecutionPrevention_SupportPolicy
     $depStatus = switch ($depPolicyValue) {
         0 { "Disabled for all processes" }
         1 { "Enabled for all processes" }
