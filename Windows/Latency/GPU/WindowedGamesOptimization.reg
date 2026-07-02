@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+; Optimizations for windowed games (Win11 22H2+): DX10/DX11 games in windowed
+; and borderless mode get flip-model presentation instead of legacy blt.
+; Lower latency, VRR + Auto HDR work in windowed. DX12 already uses flip model.
+; Docs: support.microsoft.com "Optimizations for windowed games in Windows 11"
+; Tradeoff: possible tearing in uncapped no-vsync games.
+; Per-app opt-out: Settings > System > Display > Graphics > app > Options.
+; Per-user setting (HKCU) - import for each user that games.
+; NOTE: overwrites the whole DirectXUserGlobalSettings value. If you already
+; have something there (e.g. AutoHDREnable), merge it into this string instead:
+;   reg query "HKCU\Software\Microsoft\DirectX\UserGpuPreferences"
+
+[HKEY_CURRENT_USER\Software\Microsoft\DirectX\UserGpuPreferences]
+"DirectXUserGlobalSettings"="SwapEffectUpgradeEnable=1;"
