@@ -145,6 +145,12 @@ https://support-valorant.riotgames.com/hc/en-us/articles/22291331362067-Vanguard
 
 https://www.nvidia.com/en-us/geforce/guides/system-latency-optimization-guide/
 
+NVIDIA Reflex 2 / Frame Warp: enable in supported games (THE FINALS, VALORANT, more coming) -
+warps the rendered frame with the latest mouse input right before scanout, up to 75% lower
+PC latency. RTX 50 only at launch (driver 570+), older RTX promised later. Measure the gain
+with FrameView (below).
+https://www.nvidia.com/en-us/geforce/news/reflex-2-even-lower-latency-gameplay-with-frame-warp/
+
 #### Verify presentation mode (checks MPO disable + windowed-games flip tweaks)
 
 Intel PresentMon - https://github.com/GameTechDev/PresentMon (GUI: CapFrameX - https://github.com/CXWorld/CapFrameX)
@@ -163,6 +169,17 @@ irm https://raw.githubusercontent.com/MariusHeier/cpu-direct-usb/df45b230dbd4419
 ```
 
 More USB tweaks - https://tools.mariusheier.com/
+
+Verify actual polling rate/stability: MouseTester - https://github.com/dobragab/MouseTester
+(original: https://github.com/microe1/MouseTester)
+
+xHCI IMOD (USB interrupt moderation): known, evaluated, REJECTED. The mechanism is real -
+the USB controller coalesces interrupts, adding a small fixed delay to every mouse packet:
+https://github.com/BoringBoredom/PC-Optimization-Hub/blob/main/content/xhci%20imod/xhci%20imod.md
+But every adjustment path requires RWEverything's kernel-write driver (vulnerable driver,
+incompatible with HVCI, anti-cheat flag risk) and the register resets every boot, so that
+driver must stay resident. Fails this repo's bar - use 1000Hz+ polling, direct chipset/CPU
+USB ports (cpudirect above) and the USB idle tweaks instead.
 
 #### Windows registry info
 
