@@ -20,7 +20,8 @@ rem # TCP settings for DCTCP and ECN if BBR2 not working
 ::netsh int tcp set global ECN=Enabled
 
 rem #Disable power-saving features
-powershell -command "Disable-NetAdapterPowerManagement -Name 'Ethernet'"
+rem all physical adapters - a hardcoded name like 'Ethernet' silently no-ops when the adapter is named differently
+powershell -command "Get-NetAdapter -Physical | Disable-NetAdapterPowerManagement"
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" /v "DefaultPnPCapabilities" /t REG_DWORD /d "24" /f
 
 @echo Network
@@ -266,7 +267,7 @@ for %%a in (TxIntDelay TxAbsIntDelay RxIntDelay RxAbsIntDelay) do (
 
 @echo Network Binding
 rem NOTE: disabling ms_msclient (Client for MS Networks) and ms_server (File and Printer Sharing) breaks SMB file sharing on this adapter.
-powershell Disable-NetAdapterBinding -Name "Ethernet" -ComponentID ms_lldp; Disable-NetAdapterBinding -Name "Ethernet" -ComponentID ms_msclient; Disable-NetAdapterBinding -Name "Ethernet" -ComponentID ms_lltdio; Disable-NetAdapterBinding -Name "Ethernet" -ComponentID ms_implat; Disable-NetAdapterBinding -Name "Ethernet" -ComponentID ms_rspndr; Disable-NetAdapterBinding -Name "Ethernet" -ComponentID ms_server >nul 2>&1
+powershell "Get-NetAdapter -Physical | Disable-NetAdapterBinding -ComponentID ms_lldp,ms_msclient,ms_lltdio,ms_implat,ms_rspndr,ms_server" >nul 2>&1
 
 
 @echo Network Coalescing

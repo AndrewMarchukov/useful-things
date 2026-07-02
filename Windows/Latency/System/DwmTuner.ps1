@@ -46,23 +46,25 @@ function Get-ThreadMod([IntPtr]$hProc, [IntPtr]$hThread) {
     }
 }
 
-$dwm   = Get-Process dwm | Select-Object -First 1
-$hProc = [DwmTuner]::OpenProcess(0x0410, $false, $dwm.Id)
+foreach ($dwm in (Get-Process dwm -ErrorAction SilentlyContinue)) {
+    $hProc = [DwmTuner]::OpenProcess(0x0410, $false, $dwm.Id)
+    if ($hProc -eq [IntPtr]::Zero) { continue }
 
-foreach ($t in $dwm.Threads) {
-    $hThread = [DwmTuner]::OpenThread(0x1FFFFF, $false, [uint32]$t.Id)
-    if ($hThread -eq [IntPtr]::Zero) { continue }
+    foreach ($t in $dwm.Threads) {
+        $hThread = [DwmTuner]::OpenThread(0x1FFFFF, $false, [uint32]$t.Id)
+        if ($hThread -eq [IntPtr]::Zero) { continue }
 
-    $mod     = Get-ThreadMod $hProc $hThread
-    $modName = ($mod -split ''\\'' | Select-Object -Last 1)
+        $mod     = Get-ThreadMod $hProc $hThread
+        $modName = ($mod -split ''\\'' | Select-Object -Last 1)
 
-    if ($modName -eq "dwmcore.dll" -or $modName -eq "dwmredir.dll") {
-        [DwmTuner]::SetThreadPriority($hThread, 15) | Out-Null
+        if ($modName -eq "dwmcore.dll" -or $modName -eq "dwmredir.dll") {
+            [DwmTuner]::SetThreadPriority($hThread, 15) | Out-Null
+        }
+
+        [DwmTuner]::CloseHandle($hThread) | Out-Null
     }
-
-    [DwmTuner]::CloseHandle($hThread) | Out-Null
-}
-[DwmTuner]::CloseHandle($hProc) | Out-Null'
+    [DwmTuner]::CloseHandle($hProc) | Out-Null
+}'
 
 # 4. Write clean script payload to destination
 Set-Content -Path $FilePath -Value $ScriptContent -Encoding UTF8
@@ -73,9 +75,12 @@ Unregister-ScheduledTask -TaskName $TaskName -Confirm:$false -ErrorAction Silent
 
 $Action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-WindowStyle Hidden -ExecutionPolicy Bypass -File `"$FilePath`""
 $Trigger = New-ScheduledTaskTrigger -AtLogon
+# A DWM restart (driver reset, crash) spawns a fresh untuned dwm.exe, so re-apply
+# every 5 minutes; re-boosting already-tuned threads is idempotent.
+$Trigger.Repetition = (New-ScheduledTaskTrigger -Once -At (Get-Date) -RepetitionInterval (New-TimeSpan -Minutes 5) -RepetitionDuration (New-TimeSpan -Days 3650)).Repetition
 $Principal = New-ScheduledTaskPrincipal -UserId "NT AUTHORITY\SYSTEM" -LogonType ServiceAccount -RunLevel Highest
 $Settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -ExecutionTimeLimit 0
 
 Register-ScheduledTask -TaskName $TaskName -Action $Action -Trigger $Trigger -Principal $Principal -Settings $Settings | Out-Null
 
-Write-Host "Task Scheduler configured! DwmTuner will run silently out of Program Files on startup." -ForegroundColor Cyan
+Write-Host "Task Scheduler configured! DwmTuner runs at logon and re-applies every 5 minutes (survives DWM restarts)." -ForegroundColor Cyan
