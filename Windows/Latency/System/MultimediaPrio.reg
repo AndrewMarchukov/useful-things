@@ -1,0 +1,24 @@
+Windows Registry Editor Version 5.00
+
+; MMCSS task tweaks - minimal set of values MMCSS actually reads.
+; Dropped as documented no-ops (learn.microsoft.com, "Multimedia Class Scheduler Service"):
+;   GPU Priority ("not yet used"), SFIO Priority ("not used"),
+;   Clock Rate (no effect since Windows 7), Affinity=0 (means "not used"),
+;   Priority When Yielded (undocumented), and Priority under
+;   Scheduling Category=High (always treated as 2).
+; Deliberately NOT downgrading Audio / Pro Audio / DisplayPostProcessing:
+;   audiodg registers "Audio"; starving it causes crackling and raises audio latency.
+; Backup before importing:
+;   reg export "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks" Tasks-backup.reg
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games]
+"Background Only"="False"
+"BackgroundPriority"=dword:00000001
+"Latency Sensitive"="True"
+"Priority"=dword:00000008
+"Scheduling Category"="High"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Window Manager]
+"Background Only"="True"
+"BackgroundPriority"=dword:00000008
+"Scheduling Category"="High"
