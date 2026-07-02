@@ -1,5 +1,7 @@
 Windows Registry Editor Version 5.00
-;https://khorvie.tech/mnkdataqueuesize/
+; mouclass/kbdclass driver worker thread priority = 31 (max realtime class).
+; NOT the DataQueueSize tweak - that is a different, separate one, described at:
+; https://khorvie.tech/mnkdataqueuesize/
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\mouclass\Parameters]
 "ThreadPriority"=dword:0000001f
