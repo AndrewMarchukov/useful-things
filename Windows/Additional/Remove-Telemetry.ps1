@@ -44,8 +44,8 @@ $targets = @(
     @{ Path='\Microsoft\Windows\Sustainability\';        Name='PowerGridForecastTask' }
     @{ Path='\Microsoft\Windows\Windows Media Sharing\'; Name='UpdateLibrary' }
     @{ Path='\Microsoft\Windows\WindowsAI\ClickToDo\';   Name='*' }
-    @{ Path='\Microsoft\Windows\WindowsAI\Recall\';      Name='PolicyConfiguration' }
-    @{ Path='\Microsoft\Windows\WindowsAI\Settings\';    Name='InitialConfiguration' }
+    @{ Path='\Microsoft\Windows\WindowsAI\Recall\';      Name='*' }
+    @{ Path='\Microsoft\Windows\WindowsAI\Settings\';    Name='*' }
     @{ Path='\Microsoft\Windows\Work Folders\';          Name='*' }
     @{ Path='\Microsoft\Windows\WwanSvc\';               Name='*' }
     @{ Path='\Microsoft\Windows\EDP\';                   Name='*' }
