@@ -14,6 +14,7 @@ netsh int tcp set supplemental Template=DatacenterCustom CongestionProvider=bbr2
 netsh int tcp set supplemental Template=InternetCustom CongestionProvider=bbr2
 netsh int ipv6 set gl loopbacklargemtu=disable
 netsh int ipv4 set gl loopbacklargemtu=disable
+netsh int tcp set global ECN=Enabled
 
 rem # TCP settings for DCTCP and ECN if BBR2 not working
 ::netsh int tcp set supplemental template=Internet congestionprovider=DCTCP
