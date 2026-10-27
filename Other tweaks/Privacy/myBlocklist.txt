@@ -60,6 +60,7 @@
 
 0.0.0.0 tracker-api.vk-analytics.ru
 0.0.0.0 ts.tracker-api.vk-analytics.ru
+0.0.0.0 ip4.tracker-api.vk-analytics.ru
 0.0.0.0 u.startup.mobile.webvisor.com
 0.0.0.0 startup.mobile.webvisor.com
 0.0.0.0 ru.info.lgsmartad.com
@@ -112,3 +113,10 @@
 0.0.0.0 a.wb.ru
 0.0.0.0 journal-bt.wildberries.ru
 0.0.0.0 acollector.wb.ru
+0.0.0.0 pmi-events.adsafeprotected.com
+0.0.0.0 ad.mail.ru
+0.0.0.0 r.mradx.net
+
+0.0.0.0 
+0.0.0.0 
+0.0.0.0 
