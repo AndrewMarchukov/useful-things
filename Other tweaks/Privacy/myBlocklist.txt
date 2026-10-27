@@ -128,3 +128,5 @@
 0.0.0.0 weather-analytics-events.apple.com
 0.0.0.0 fundingchoicesmessages.google.com
 0.0.0.0 h93j6i.inapps.appsflyersdk.com
+0.0.0.0 exchange.buzzoola.com
+
