@@ -125,3 +125,6 @@
 0.0.0.0 analytics.adjust.com
 0.0.0.0 startup.mobile.yandex.net
 0.0.0.0 firebase-settings.crashlytics.com
+0.0.0.0 weather-analytics-events.apple.com
+0.0.0.0 fundingchoicesmessages.google.com
+0.0.0.0 h93j6i.inapps.appsflyersdk.com
