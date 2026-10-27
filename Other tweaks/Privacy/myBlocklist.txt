@@ -58,10 +58,10 @@
 0.0.0.0 settings-sandbox.data.microsoft.com
 0.0.0.0 vortex-sandbox.data.microsoft.com
 
+0.0.0.0 tracker-api.vk-analytics.ru
 0.0.0.0 ts.tracker-api.vk-analytics.ru
 0.0.0.0 u.startup.mobile.webvisor.com
 0.0.0.0 startup.mobile.webvisor.com
-0.0.0.0 tracker-api.vk-analytics.ru
 0.0.0.0 ru.info.lgsmartad.com
 0.0.0.0 report.appmetrica.yandex.net
 0.0.0.0 sdk-api.apptracer.ru
@@ -106,4 +106,9 @@
 0.0.0.0 configure.rayjump.com
 0.0.0.0 skadnetworks.fyber.com
 0.0.0.0 default.exp-tas.com
-
+0.0.0.0 trace-flow.ru
+0.0.0.0 an.yandex.ru
+0.0.0.0 firebaselogging-pa.googleapis.com
+0.0.0.0 a.wb.ru
+0.0.0.0 journal-bt.wildberries.ru
+0.0.0.0 acollector.wb.ru
