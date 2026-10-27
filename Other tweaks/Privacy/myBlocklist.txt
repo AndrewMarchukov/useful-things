@@ -114,6 +114,8 @@
 0.0.0.0 journal-bt.wildberries.ru
 0.0.0.0 acollector.wb.ru
 0.0.0.0 pmi-events.adsafeprotected.com
+0.0.0.0 fw.adsafeprotected.com
+0.0.0.0 adsafeprotected.com
 0.0.0.0 ad.mail.ru
 0.0.0.0 r.mradx.net
 0.0.0.0 ads.adfox.ru
@@ -129,4 +131,4 @@
 0.0.0.0 fundingchoicesmessages.google.com
 0.0.0.0 h93j6i.inapps.appsflyersdk.com
 0.0.0.0 exchange.buzzoola.com
-
+0.0.0.0 cdn.doubleverify.com
