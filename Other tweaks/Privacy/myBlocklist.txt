@@ -57,3 +57,10 @@
 0.0.0.0 telemetry.urs.microsoft.com
 0.0.0.0 settings-sandbox.data.microsoft.com
 0.0.0.0 vortex-sandbox.data.microsoft.com
+
+0.0.0.0 ts.tracker-api.vk-analytics.ru
+0.0.0.0 u.startup.mobile.webvisor.com
+0.0.0.0 startup.mobile.webvisor.com
+0.0.0.0 tracker-api.vk-analytics.ru
+0.0.0.0 ru.info.lgsmartad.com
+0.0.0.0 report.appmetrica.yandex.net
