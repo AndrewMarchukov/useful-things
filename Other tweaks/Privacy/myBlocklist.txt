@@ -116,7 +116,3 @@
 0.0.0.0 pmi-events.adsafeprotected.com
 0.0.0.0 ad.mail.ru
 0.0.0.0 r.mradx.net
-
-0.0.0.0 
-0.0.0.0 
-0.0.0.0 
