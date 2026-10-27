@@ -116,3 +116,12 @@
 0.0.0.0 pmi-events.adsafeprotected.com
 0.0.0.0 ad.mail.ru
 0.0.0.0 r.mradx.net
+0.0.0.0 ads.adfox.ru
+0.0.0.0 mc.yandex.ru
+0.0.0.0 stats.avito.ru
+0.0.0.0 wcm.weborama-tech.ru
+0.0.0.0 analytics.adjust.world
+0.0.0.0 analytics.adjust.net.in
+0.0.0.0 analytics.adjust.com
+0.0.0.0 startup.mobile.yandex.net
+0.0.0.0 firebase-settings.crashlytics.com
